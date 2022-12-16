@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import {motion} from 'framer-motion'
 
 
 
@@ -7,34 +8,33 @@ const PostCard = ({ post }) => {
 
 
   return (
-    <div className="bg-wite shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
-      <div className="relative overflow-hidden shadow-md pb-80 mb-6">
+    
+    <div className="w-full bg-wite shadow-2xl rounded-lg p-0 my-8">
+
         <video
           src={post.featuredImage.url}
           alt={post.title}
-          className="object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
+          className=" object-cover w-full rounded-t-lg md:h-auto"
+          // className="object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg "
         />
-      </div>
+<div className="col-span-4 justify-between p-4 leading-normal">
       <h1
-        className="transition duration-100 text-center mb-8 cursor:pointer 
-hover:text-pink-600 text-3xl font-semibold"
+        className="mb-2 text-xl font-normal tracking-tight  dark:text-white"
       >
-        <Link href={`/post/${post.slug}`}>{post.title}</Link>
+        {post.title}
       </h1>
-      <div className="block lg:flex text-center items-center justify-center mb-8 w-full">
-        <div className="flex items-center justify-center mb-4 lg:mb-0 w-full lg:mb-0 w-full lg:w-auto mr-8">
-          <p className="text-center text-lg text-gray-700 font-normal px-4 lg:px-20 mb-8">
+      
+          <p className="mb-3 font-normal text-gray-500">
             {post.excerpt}
           </p>
-          <div>
+          <p className="mb-3 font-normal text-gray-500" >
             {post.content.text}
-          </div>
+          </p>
+     
 
 
       
-          <div className="text-center text-lg text-gray-700 font-normal px-4 lg:px-20 mb-8">
-
-          </div>
+      
             {/* <Link href={`/post/${post.slug}`}>
               <span className="transition duration-500 transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">
                 Continue reading
@@ -42,7 +42,7 @@ hover:text-pink-600 text-3xl font-semibold"
             </Link> */}
           </div>
         </div>
-      </div>
+    
 
   );
 };
