@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Categories from "./Categories";
+import TextSlider from "./TextSlider";
+import { SliderData } from "./SliderData";
+
 
 const Header = () => {
 
   return (
-    <div className="container mx-auto px-10 mb-8">
-      <div className=" w-full inline-block border-blue-400 py-8">
-        <div className="md:float-left block">
-          <Link href="/">
-            <span className="cursor-pointer text-base bg-white rounded-3xl px-8 py-2 ">
-              ève wolfs
-            </span>
-          </Link>
-        </div>
-    <Categories />
+    <div className="container mx-8">
+      <div className=" w-full inline-flex py-8">
+
+          <TextSlider  slides={SliderData} />
       </div>
+
+    <Categories />
     </div>
   );
 };

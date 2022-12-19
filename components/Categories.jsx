@@ -10,7 +10,7 @@ const Categories = () => {
   }, []);
 
   return (
-    <div className="w-full p-8 m-8 ">
+    <div className="w-full py-4 my-2 ">
       {categories.map((category) => (
         <Link key={category.slug} href={`/category/${category.slug}`}>
           <span className="ml-4 cursor-pointer text-base bg-white rounded-3xl px-8 py-2 ">
