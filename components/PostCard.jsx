@@ -13,7 +13,7 @@ const PostCard = ({ post }) => {
 
   return (
     
-    <div className="w-full bg-wite shadow-2xl rounded-lg p-0 my-8">
+    <div className="w-full bg-wite shadow-2xl rounded-lg my-8">
 
         <video
           playsInline

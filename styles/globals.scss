@@ -15,7 +15,7 @@ body {
     width: 100%;
     height: 100vh;
     // background: linear-gradient(to right bottom, #6d327c, #485DA6, #00a1ba, #01b18e, #32b37b);
-    background: #c0c0c0;
+    background: #e3ffba;
     // background-image: url("../public/bg.jpg");
     position: fixed;
     left: 0;
@@ -75,7 +75,7 @@ a {
   justify-content: center;
   align-items: center;
   vertical-align: middle;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.758);
   border-radius: 40px;
 
 }

@@ -13,7 +13,7 @@ const Categories = () => {
     <div className="w-full py-4 my-2 ">
       {categories.map((category) => (
         <Link key={category.slug} href={`/category/${category.slug}`}>
-          <span className="ml-4 cursor-pointer text-base bg-white rounded-3xl px-8 py-2 ">
+          <span className="mr-4 cursor-pointer text-base bg-white rounded-3xl px-8 py-2 shadow ">
             {category.name}
           </span>
         </Link>

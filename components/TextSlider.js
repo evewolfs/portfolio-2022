@@ -20,7 +20,7 @@ const TextSlider = ({ slides }) => {
   return (
     <>
 
-    <section className="slider">
+    <section className="slider shadow">
     <div className="title">ève wolfs</div>
       <div className="left-arrow" onClick={prevSlide}>
       &#8592;
