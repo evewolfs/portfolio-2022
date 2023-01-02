@@ -4,7 +4,7 @@ import { getPosts } from "../services";
 
 export default function Home({ posts }) {
   return (
-    <div className="containter mx-8 mb-8">
+    <div className="containter mx-8 mb-8 dark:bg-purple-500">
       <Head>
         <title>ève wolfs</title>
         <link rel="icon" href="/favicon.ico" />

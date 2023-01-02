@@ -1,6 +1,6 @@
 export const SliderData = [
     {text: 'designer & developer'},
-    {text: 'cyclist & potato coach'},
-    {text: 'dreamer & maker'},
+    {text: 'cyclist & tinkerer'},
     {text: 'Brussels born & based'},
+    {text: 'freelance & at your disposal'},
 ]
