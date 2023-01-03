@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import Categories from "./Categories";
 import TextSlider from "./TextSlider";
 import { SliderData } from "./SliderData";
@@ -6,9 +6,11 @@ import ButtonContact from "./ButtonContact";
 import ButtonGit from "./ButtonGit";
 import ButtonLi from "./ButtonLi";
 
-const Header = () => {
+const Header = (props) => {
+
   return (
-    <div className="container mx-8">
+    <div className="container mx-8" style={{
+      backgroundColor: props.colortoshow}} >
       <div className=" w-full py-8">
         <TextSlider slides={SliderData} />
       </div>
@@ -17,7 +19,7 @@ const Header = () => {
         <ButtonGit />
         <ButtonLi />
       </div>
-
+      
       <Categories />
     </div>
   );
