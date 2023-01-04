@@ -6,11 +6,11 @@ const ButtonGit = () => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
   return (
-    <div className="inline-block  m-6">
+    <div className="button-box">
       <a onClick={() => openInNewTab("https://github.com/evewolfs/")}>
-        <div className=" flex cursor-pointer align-middle bg-white rounded-3xl px-4 shadow">
-          <FiGithub size={12} className="mt-2.5" />{" "}
-          <div className="text-xs font-bold p-2 ">GITHUB</div>
+        <div className="button-header">
+          <FiGithub size={20} className="m-2"/>{" "}
+      
         </div>
       </a>
     </div>

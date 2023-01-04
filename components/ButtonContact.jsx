@@ -3,11 +3,11 @@ import { SlBubble } from "react-icons/sl";
 
 const ButtonContact = () => {
   return (
-    <div className="inline-block">
+    <div className="button-box">
       <a href="mailto:info@evewolfs.net">
-        <div className=" flex cursor-pointer align-middle bg-white rounded-3xl px-4 shadow">
-          <SlBubble size={12} className="mt-2.5" />{" "}
-          <div className="text-xs font-bold p-2 ">CONTACT</div>
+      <div className="button-header">
+          <SlBubble size={20} className="m-2 items-center"/>{" "}
+        
         </div>
       </a>
     </div>
