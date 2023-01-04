@@ -4,6 +4,7 @@ import { getCategories } from "../services";
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
+  const [active, setActive] = useState(null)
 
   useEffect(() => {
     getCategories().then((newCategories) => setCategories(newCategories));
@@ -12,10 +13,9 @@ const Categories = () => {
   return (
     <div className="w-full p-4 m-4 ">
       {categories.map((category) => (
-        <Link key={category.slug} href={`/category/${category.slug}`}>
-          <span className="categories">
+        <Link key={category.slug} href={`/category/${category.slug}`} onClick={() => setActive(category)}
+        className={`categories ${active == category && 'active'}`}>
             {category.name}
-          </span>
         </Link>
       ))}
     </div>
