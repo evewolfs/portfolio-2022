@@ -14,6 +14,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Ubuntu mono', monospace;
+  
   &:before{
     content:'';
     content: "";
@@ -71,7 +72,23 @@ a {
   box-sizing: border-box;
 }
 
+.text-box{
+padding: 0.5%;
+}
 
+.post-title{
+font-size: 20px;
+font-weight: 400;
+margin-top: 1%;
+
+
+}
+
+.post-excerpt{
+  font-size: 14px;
+  font-weight: 400;
+ 
+}
 .p-text {
   padding-top: 1rem;
 }
@@ -95,74 +112,74 @@ a {
 padding-right: 60px;
 }
 
-.slider-text {
 
-margin: 1%;
-flex-wrap: nowrap;
-width: 260px;
-text-align: center;
-}
+.bio-button {
 
-.right-arrow{
- 
-  top: 0%;
-padding-left: 1%;
-  font-size: 2rem;
-  color: #4d4d4d;
-  z-index: 10;
-  cursor: pointer;
-  user-select: none;
-}
-
-.left-arrow{
-
-  top: 0%;
-  padding-right: 1%;
-  font-size: 2rem;
-  color: #4d4d4d;
-  z-index: 10;
-  cursor: pointer;
-  user-select: none;
-}
-
-
-.button-header {
   display: flex;
   cursor: pointer;
+  justify-content: left;
+  flex-direction: column;
+  white-space: nowrap;
   vertical-align: middle;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 40px;
-  height:50px;
-  width: 50px;
-  padding-left: 7px;
+ box-shadow: var(--shadow);
+ background: var(--clearbg);
+ padding: 0.7% 1%;
+height: 40px;
+width: 118px;
+ border-radius: 20px;
+ margin-right: 2%;
+
+  p{
+    padding: 2%;
+  word-wrap: break-word;
+  width: fit-content;
   box-shadow: var(--shadow);
-  background: var(--clearbg);
+  background: #fff;
+  z-index: 100;
+  font-size: 12px;
+  border-radius: 10px;
+
+}
 }
 
-.button-box{
-  float: right;
+.header-line {
+display: flex;
+flex-direction: row;
+vertical-align: middle;
 }
 
-.categories {
-  margin-right: 4%;
+
+.contact-box{
+  display:flex;
+  width:fit-content;
   cursor: pointer;
-  font-size: 1rem;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 40px;
-  height: 40px;
-  padding: 1% 2%;
-  box-shadow: var(--shadow);
- 
-  &.active {
+  vertical-align: middle;
+ box-shadow: var(--shadow);
+ background: var(--clearbg);
+ padding: 10px;
+ justify-content: center;
+ cursor: pointer;
+height: 40px;
+width: 40px;
+ border-radius: 40px;
 
-    background: rgba(255, 255, 255, 0.6);
-  
-  }
-  &:hover {
-    
-    background: rgba(255, 255, 255, 0.6);
-  }
-  
 }
+
+.categories-box{
+  display: flex;
+  flex-flow: row wrap;
+  width: 80%;
+}
+
+
+  
+
+
+
+  .img-box{
+
+    object-fit: contain;
+    border-radius: 10px;
+  
+  }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import {motion} from 'framer-motion'
+import {motion} from 'framer-motion';
 import { useState, useRef } from "react";
 
 
@@ -8,31 +8,25 @@ import { useState, useRef } from "react";
 
 const PostCard = ({ post }) => {
 
-
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     
-    <div className="w-full bg-wite shadow-2xl rounded-lg my-8">
+    <div className="post-box">
 
-        <video
-          playsInline
-          loop
-          muted
-          // autoPlay
-          src={post.featuredImage.url}
-          alt={post.title}
-          className=" object-cover w-full rounded-t-lg md:h-auto"
-          // className="object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg "
-        />
-<motion.div transition={{layout: {duration: 1, type: "spring"}}} onClick={() =>setIsOpen(!isOpen)} className="col-span-4 justify-between p-4 leading-normal">
+    <img  className="img-box" src={post.featuredImage.url} />
+       
+
+
+<motion.div transition={{layout: {duration: 1, type: "spring"}}} onClick={() =>setIsOpen(!isOpen)} className="text-box">
       <motion.h1
-        className="mb-2 text-xl font-normal tracking-tight  dark:text-white"
+        className="post-title"
       >
         {post.title}
+        {post.websiteLink}
       </motion.h1>
       
-          <motion.p>
+          <motion.p className="post-excerpt">
             {post.excerpt}
           </motion.p>
 
@@ -50,6 +44,7 @@ const PostCard = ({ post }) => {
               </span>
             </Link> */}
           </motion.div>
+     
         </div>
     
 

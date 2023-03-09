@@ -11,13 +11,15 @@ const Categories = () => {
   }, []);
 
   return (
-    <div className="w-full p-4 m-4 ">
+    <div className="categories-box">
+    <div className="categories">
       {categories.map((category) => (
         <Link key={category.slug} href={`/category/${category.slug}`} onClick={() => setActive(category)}
-        className={`categories ${active == category && 'active'}`}>
+        className={`categories ${active == category && 'active'}`} id="cat-link">
             {category.name}
         </Link>
       ))}
+    </div>
     </div>
   );
 };

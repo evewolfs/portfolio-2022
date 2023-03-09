@@ -16,12 +16,14 @@ body {
 .theme-options {
   
  color:#222;
-    margin: 4% 2.5%;
+    // margin: 4% 2.5%;
    display: inline-flex;
    padding: 0.5%;
+   margin-right: 2%;
    cursor: pointer;
    background:  rgba(255, 255, 255, 0.3);
- 
+  width:fit-content;
+  height: 40px;
    border-radius: 40px;
    box-shadow: var(--shadow);
    vertical-align: middle;
@@ -92,12 +94,20 @@ body {
         }
     }
 
+header-box {
+    div{
+        display: flex;
+        vertical-align: middle;
+        
+            }
+}
 
 .content-box {
     margin: 0 auto;
     color: #222;
-    padding: 0 4%;
+    padding: 2% 4%;
     background-color: transparent;
+
     h3{
         line-height: 1.2;
         margin: 0;
@@ -110,42 +120,83 @@ body {
     }
 }
 
+.post-box{
+    padding: 1%;
+    margin-bottom: 4%;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+  }
+
+  .categories {
+    margin-right: 4%;
+    cursor: pointer;
+    font-size: 1rem;
+    width: fit-content;
+    padding: 0.5% 2%;
+    margin: 4% 0;
+    border-radius: 40px;
+    height: 40px;
+    padding: 1% 2%;
+  
+  
+    a{
+    
+      box-shadow: var(--shadow);
+      white-space: nowrap;
+      margin-right: 2%;
+  
+     
+    }
+   
+    // &.active a{
+  
+    //   background: rgba(255, 255, 255, 0.6);
+    
+    // }
+    // &:hover a{
+      
+    //   background: rgba(255, 255, 255, 0.6);
+    // }
+    
+  }
+  
+
+
+
 .Main.theme-moon {
     background-color: #2b2b2b;
     .content-box{
        
-        h3, h5 {
-            color: #fff;
+        h3, h5, p {
+            color: rgb(245, 245, 245);;
         }
-        p {
-            color: #ccc;
-        }
+        .post-box { background-color: rgba(25, 25, 25, 0.9);}
+      
     }
 }
 
 .Main.theme-sun {
     background-color: #c2c2c2;
     .content-box{
-        background-color:#ebedd6 ;
-        h3, h5 {
+        background-color:#f6f6f6 ;
+        h3, h5,p {
             color: rgb(45, 45, 45);
         }
-        p {
-            color: rgb(31, 31, 31);
-        }
+        .post-box { background-color: rgba(25, 25, 25, 0.9);}
+     
     }
 }
 
 .Main.theme-cloud {
     background-color: #717171;
+   
     .content-box{
-        background-color:#aeb7d3c2 ;
-        h3, h5 {
-            color: rgb(30, 30, 30);
+        background-color:#c1c5d3 ;
+        h3, h5,p {
+            color: rgb(245, 245, 245);
         }
-        p {
-            color: rgb(20, 20, 20);
-        }
+        .post-box {background-color: rgba(255, 255, 255, 0.9);}
+    
     }
 }
 
@@ -166,7 +217,7 @@ body {
             background-position: 0% 50%;
         }
     }
-    
+
     .content-box{
         h3, h5 {
             color: rgb(67, 67, 67);
@@ -174,5 +225,13 @@ body {
         p {
             color: rgb(57, 57, 57);
         }
+        .post-box {background-color: rgba(255, 255, 255, 0.9);}
+        #cat-link {
+            &:nth-child(1) a { background: #636393; }
+&:nth-child(2) a { background: #B5222D; }
+&:nth-child(3) a { background: #D4953C; }
+&:nth-child(4) a { background: #609491; }
+    
     }
-}
+ 
+    }}
