@@ -2,33 +2,32 @@ import React from 'react';
 import {motion} from 'framer-motion';
 import { useState } from "react";
 
+
+
 const BioButton = () => {
+    
     const [isBioOpen, setIsBioOpen] = useState(false);
 
   return (
-    <div className="box">
+  
     <motion.div transition={{layout: {duration: 1, type: "spring"}}} onClick={() =>setIsBioOpen(!isBioOpen)} className="bio-button">
-      <motion.div>
+      <motion.h1>
         ève wolfs &#8595;
-        </motion.div>
+        </motion.h1>
          
-          </motion.div>
+    
 
 {isBioOpen &&
 (  <motion.p>
-       1990 - born and brewed in Brussels <br/>
-        2008 - raised by a graphic designer and a plastic art teacher <br/>
-        2015 - graduated from a industrial design master<br/>
-        2016 - worked for 3 years as a design researcher/UX designer for agencies<br/>
-        2019 - studied front-end development <br/>
-        2020 - have been freelancing as a designer and developer, see below ;
-        
-
-
-          </motion.p>)}
+      I am a UX/UI designer and front-end developer.
+I was born in Brussels, and raised by a graphic designer and a high school art teacher.
+I have a master in industrial design (2015) and first worked 3 years as a design researcher, service and UX designer. Mostly interviewing users, analysing markets, reporting trends or writing UX recommendations.  I then studied web development and started my own design+development freelance activity (2020). From visual identity, and information architecture to product development, I enjoy every single step of the process, including meeting potential clients. So don’t hesitate to contact me, if you feel we could do great things together.
+    
+        </motion.p>)}
 
         
-          </div>
+          </motion.div>
+      
   )
 }
 

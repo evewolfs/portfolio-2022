@@ -1,13 +1,22 @@
 import React from "react";
 import Link from "next/link";
 import {motion} from 'framer-motion';
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import { getCategories } from "../services";
 
 
 
 
-const PostCard = ({ post }) => {
 
+
+const PostCard = ({ post, category }) => {
+
+  const [categories, setCategories] = useState([]);
+  const [active, setActive] = useState(null)
+
+  useEffect(() => {
+    getCategories().then((newCategories) => setCategories(newCategories));
+  }, []);
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -25,15 +34,25 @@ const PostCard = ({ post }) => {
         {post.title}
         {post.websiteLink}
       </motion.h1>
-      
+      <div className="categories">
+      {post.categories.map((category) => (
+        <Link key={category.slug} href={`/category/${category.slug}`} onClick={() => setActive(category)}
+        className={`categories ${active == category && 'active'}`} id="cat-link">
+            {category.name}
+        </Link>
+      ))}
+    </div>
           <motion.p className="post-excerpt">
             {post.excerpt}
           </motion.p>
 
+    
+    
+
 {isOpen &&
-(  <motion.p className="p-text">
-            {post.content.text}
-          </motion.p>)}
+(  <motion.div className="p-text" >
+            {post.markdownText}
+          </motion.div>)}
 
 
       

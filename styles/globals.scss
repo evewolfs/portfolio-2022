@@ -2,11 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Ubuntu+Mono&display=swap');
 
 :root {
   --clearbg: rgba(255, 255, 255, 0.6);
   --shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  --text: rgb(235, 235, 235);
 }
 
 html,
@@ -20,11 +21,6 @@ body {
     content: "";
     width: 100%;
     height: 100vh;
-    // background: linear-gradient(to right bottom, #6d327c, #485DA6, #00a1ba, #01b18e, #32b37b);
-
-
-
-    // background-image: url("../public/bg.jpg");
     position: fixed;
     left: 0;
     top: 0;
@@ -72,6 +68,14 @@ a {
   box-sizing: border-box;
 }
 
+
+.img-box{
+  object-fit: contain;
+  border-radius: 20px;
+  border: 10px solid #222;
+}
+
+
 .text-box{
 padding: 0.5%;
 }
@@ -80,6 +84,7 @@ padding: 0.5%;
 font-size: 20px;
 font-weight: 400;
 margin-top: 1%;
+font-family: 'Inter', sans-serif;
 
 
 }
@@ -91,6 +96,7 @@ margin-top: 1%;
 }
 .p-text {
   padding-top: 1rem;
+  margin: 4%;
 }
 
 .slider {
@@ -118,29 +124,18 @@ padding-right: 60px;
   display: flex;
   cursor: pointer;
   justify-content: left;
-  flex-direction: column;
-  white-space: nowrap;
+  margin: 1%;
   vertical-align: middle;
  box-shadow: var(--shadow);
- background: var(--clearbg);
+ background: #fff;
  padding: 0.7% 1%;
-height: 40px;
-width: 118px;
+width: fit-content;
+height: fit-content;
  border-radius: 20px;
- margin-right: 2%;
-
-  p{
-    padding: 2%;
-  word-wrap: break-word;
-  width: fit-content;
-  box-shadow: var(--shadow);
-  background: #fff;
-  z-index: 100;
-  font-size: 12px;
-  border-radius: 10px;
 
 }
-}
+
+
 
 .header-line {
 display: flex;
@@ -148,6 +143,42 @@ flex-direction: row;
 vertical-align: middle;
 }
 
+.categories {
+  // display: flex;
+  // flex-wrap: wrap;
+  margin-right: 4%;
+  cursor: pointer;
+  font-size: 1rem;
+  width: fit-content;
+  padding: 0.5% 2%;
+  margin: 4% 0;
+  border-radius: 40px;
+  height: 40px;
+  padding: 1% 2%;}
+
+
+  a{
+  
+    box-shadow: var(--shadow);
+    white-space: nowrap;
+    margin-right: 2%;
+
+   
+  }
+
+.p-bio{
+ div{
+  display: block;
+    padding: 2%;
+  z-index: 100;
+  font-size: 14px;
+  white-space: pre-wrap;
+  max-width: 400px;
+
+}
+
+
+}
 
 .contact-box{
   display:flex;
@@ -161,7 +192,9 @@ vertical-align: middle;
  cursor: pointer;
 height: 40px;
 width: 40px;
+margin: 1%;
  border-radius: 40px;
+
 
 }
 
@@ -173,13 +206,4 @@ width: 40px;
 
 
   
-
-
-
-  .img-box{
-
-    object-fit: contain;
-    border-radius: 10px;
-  
-  }
 
