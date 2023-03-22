@@ -5,7 +5,6 @@ const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 export const getPosts = async () => {
   const query = gql`
     query MyQuery {
-     
       postsConnection {
         edges {
           node {
@@ -14,13 +13,15 @@ export const getPosts = async () => {
             title
             excerpt
             websiteLink
-            markdownText
             featuredImage {
               url
             }
             categories {
               name
               slug
+            }
+            content {
+              text
             }
           }
         }
@@ -58,7 +59,6 @@ export const getCategoryPost = async (slug) => {
             title
             excerpt
             websiteLink
-            markdownText
             featuredImage {
               url
             }
@@ -66,7 +66,9 @@ export const getCategoryPost = async (slug) => {
               name
               slug
             }
-         
+            content {
+              text
+            }
           }
         }
       }

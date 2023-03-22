@@ -21,7 +21,9 @@ const BioButton = () => {
 (  <motion.p>
       I am a UX/UI designer and front-end developer.
 I was born in Brussels, and raised by a graphic designer and a high school art teacher.
-I have a master in industrial design (2015) and first worked 3 years as a design researcher, service and UX designer. Mostly interviewing users, analysing markets, reporting trends or writing UX recommendations.  I then studied web development and started my own design+development freelance activity (2020). From visual identity, and information architecture to product development, I enjoy every single step of the process, including meeting potential clients. So don’t hesitate to contact me, if you feel we could do great things together.
+I have a master in industrial design (2015) and first worked 3 years as a design researcher, service and UX designer. 
+Mostly interviewing users, analysing markets, reporting trends or writing UX recommendations.  I then studied web development and started my own design+development freelance activity (2020). 
+From visual identity, and information architecture to product development, I enjoy every single step of the process, including meeting potential clients. So don’t hesitate to contact me, if you feel we could do great things together.
     
         </motion.p>)}
 

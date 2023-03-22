@@ -43,11 +43,10 @@ localStorage.setItem('theme-color', theme)
         {isBioOpen &&
 (  <motion.div className="p-bio">
                    I am a multi-designer and front-end developer.<br/>
-I was born and raised in Brussels, by a graphic designer and a high school art teacher.<br/>
-I have a master in product design (2015) and first worked as a design researcher, service and UX designer.<br/>
-Until 2019, I was mostly interviewing users, analysing markets, reporting trends and writing recommendations.<br/> 
-In need of something more concrete, I started studying web development (2019) and began selling websites as a freelancer.(2020)<br/>
-I enjoy every single step of the process, including meeting new people and writing proposals. So don’t hesitate to contact me!
+I was born and raised in Brussels, by a graphic designer and a high school art teacher.
+I have a master in product design (2015) and first worked as a design researcher and  UX designer for 3 years.
+<br/>I then got trained as a front-end developer (2019) and have been working since then for quite different individuals and organisations.<br/>
+I enjoy every single step of the process, including meeting new people and writing proposals.<br/> So don’t hesitate to contact me!
         
 
 

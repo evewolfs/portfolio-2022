@@ -3,6 +3,7 @@ import Link from "next/link";
 import {motion} from 'framer-motion';
 import { useState, useRef, useEffect } from "react";
 import { getCategories } from "../services";
+import { RichText } from '@graphcms/rich-text-react-renderer';
 
 
 
@@ -22,48 +23,45 @@ const PostCard = ({ post, category }) => {
   return (
     
     <div className="post-box">
-
+<div className="left-box">
     <img  className="img-box" src={post.featuredImage.url} />
-       
+       </div>
 
-
+<div className="right-box">
 <motion.div transition={{layout: {duration: 1, type: "spring"}}} onClick={() =>setIsOpen(!isOpen)} className="text-box">
       <motion.h1
         className="post-title"
       >
         {post.title}
-        {post.websiteLink}
       </motion.h1>
-      <div className="categories">
-      {post.categories.map((category) => (
-        <Link key={category.slug} href={`/category/${category.slug}`} onClick={() => setActive(category)}
-        className={`categories ${active == category && 'active'}`} id="cat-link">
-            {category.name}
-        </Link>
-      ))}
-    </div>
           <motion.p className="post-excerpt">
             {post.excerpt}
           </motion.p>
-
-    
-    
-
-{isOpen &&
-(  <motion.div className="p-text" >
-            {post.markdownText}
-          </motion.div>)}
+          <motion.button className="button-more">+</motion.button>
+    {isOpen &&
+(  <motion.p className="p-text">
+            {post.content.text}
+          </motion.p>)}
 
 
-      
-      
-            {/* <Link href={`/post/${post.slug}`}>
-              <span className="transition duration-500 transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">
-                Continue reading
-              </span>
-            </Link> */}
           </motion.div>
-     
+          <div className="categories-card">
+      {post.categories.map((category) => (
+        <Link key={category.slug} href={`/category/${category.slug}`} onClick={() => setActive(category)}
+        className={`categories-cards ${active == category && 'active'}`}>
+            {category.name}
+        </Link>
+      ))}
+          
+    </div>
+   
+    <div className="web-link"><a
+        href={post.websiteLink}
+        target="_blank"
+        rel="noreferrer"
+      >  {post.websiteLink} </a></div>
+
+     </div>
         </div>
     
 

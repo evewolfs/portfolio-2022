@@ -9,7 +9,6 @@ html {
 body {
     background-color: #fff;
     color: #222;
-    padding: 0;
     height: 100vh;
 }
 
@@ -21,17 +20,49 @@ body {
    margin: 1%;
    margin-right: 2%;
    cursor: pointer;
-   background:  rgba(255, 255, 255, 0.3);
   width:fit-content;
   height: 40px;
    border-radius: 40px;
    box-shadow: var(--shadow);
+   background:  rgba(255, 255, 255, 0.3);
    vertical-align: middle;
    align-items: center;
    justify-content: center;
    
 
-    
+   header-box {
+    div{
+        display: flex;
+        vertical-align: middle;
+     
+            }
+}
+
+.content-box {
+    margin: 0 auto;
+    background-color: transparent;
+
+    h3{
+        line-height: 1.2;
+        margin: 0;
+        font-size: 26px;
+    }
+    h5 {
+        line-height: 1.5;
+        margin: 0 0 22px 0;
+        font-size: 20px;
+    }
+    p {
+        line-height: 1.1;
+        margin: 0 0 22px 0;
+        font-size: 18px;
+    }
+
+}
+
+
+  
+  
    
 
     #theme-sun {
@@ -105,82 +136,34 @@ body {
         }
     }
 
-header-box {
-    div{
-        display: flex;
-        vertical-align: middle;
-        
-            }
-}
-
-.content-box {
-    margin: 0 auto;
-    color: #222;
-    padding: 2% 4%;
-    background-color: transparent;
-
-    h3{
-        line-height: 1.2;
-        margin: 0;
-        font-size: 26px;
-    }
-    h5 {
-        line-height: 1.5;
-        margin: 0 0 22px 0;
-        font-size: 20px;
-    }
-    p {
-        line-height: 1.1;
-        margin: 0 0 22px 0;
-        font-size: 18px;
-    }
-
-}
-
-.post-box{
-    padding: 1%;
-    margin-bottom: 4%;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-  }
-
-  
-   
-    // &.active a{
-  
-    //   background: rgba(255, 255, 255, 0.6);
-    
-    // }
-    // &:hover a{
-      
-    //   background: rgba(255, 255, 255, 0.6);
-    // }
-    
-  
-  
-
-
 
 .Main.theme-moon {
     background-color: #2b2b2b;
     .content-box{
        
-        h3, h5, p {
-            color: rgb(245, 245, 245);;
+        h1, h2, h3, h4, h5, p, .right-box{
+            color: rgb(245, 245, 245);
         }
-        .post-box { background-color: rgba(25, 25, 25, 0.9);}
+        .button-more, .web-link {
+            border: 1px solid rgb(245, 245, 245);
+
+        }
+        .categories {
+            a
+           { box-shadow: var(--shadow);
+            background:  rgba(255, 255, 255, 0.3);}
+         
+        }
       
     }
 }
 
 .Main.theme-sun {
-    background-color: #c2c2c2;
     .content-box{
         background-color:#f6f6f6 ;
         h3, h5,p {
             color: rgb(45, 45, 45);
         }
-        .post-box { background-color: rgba(25, 25, 25, 0.9);}
      
     }
 }
@@ -189,19 +172,15 @@ header-box {
     background-color: #c1c5d3;
    
     .content-box{
-        background-color:#c1c5d3 ;
-        h3, h5,p {
-            color: rgb(245, 245, 245);
-        }
-        .post-box {background-color: rgba(255, 255, 255, 0.9);}
+
         .bio-button, .contact-box, .theme-options{
             background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 0 10px 8px rgb(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px 8px rgb(255, 255, 255, 0.7);
             filter: blur(0.7px);
         }
         .categories {a{
             background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 0 12px 12px rgb(255, 255, 255, 0.9);
+            box-shadow: 0 0 12px 12px rgb(255, 255, 255, 0.7);
             filter: blur(0.7px);
         }}
     }
@@ -209,21 +188,7 @@ header-box {
 
 .Main.theme-rainbow {
     background-color: #9399a9;
-    // background: linear-gradient(-45deg, #FF7878, #FFC898, #FFF89A, #CDF2CA, #A2CDCD, #D1E8E4,#CAB8FF);
-	// background-size: 100%;
-	// // animation: gradient 8s ease infinite;
-
-    // @keyframes gradient {
-    //     0% {
-    //         background-position: 0% 50%;
-    //     }
-    //     50% {
-    //         background-position: 100% 50%;
-    //     }
-    //     100% {
-    //         background-position: 0% 50%;
-    //     }
-    // }
+ 
 
     .content-box{
         h3, h5 {
@@ -232,7 +197,6 @@ header-box {
         p {
             color: rgb(57, 57, 57);
         }
-        .post-box {background-color: rgba(255, 255, 255, 0.9);}
         .categories {
             a{background-color: rgba(255, 255, 255, 0);
                 &:nth-child(1) {  opacity: 0.6; border: 0px solid #CC99FF; background-color:#cc99ff; box-shadow:#CC99FF 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; }
@@ -244,138 +208,13 @@ header-box {
 
             }
 
-            // a{background-color: rgba(255, 255, 255, 0);
-            //     &:nth-child(1) { border: 1px solid #8d5cff; color:#8d5cff; box-shadow:#8d5cff 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; }
-            //     &:nth-child(2) { border: 1px solid #FF616B; color:#FF616B; box-shadow:#FF616B 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;}
-            //     &:nth-child(3) { border: 1px solid #FFE488; color:#FFE488; box-shadow:#FFE488 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;}
-            //     &:nth-child(4) { border: 1px solid #8CFF85; color:#8CFF85; box-shadow:#8CFF85 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;}
-            //     &:nth-child(5) { border: 1px solid #80C7FF; color:#80C7FF; box-shadow:#80C7FF 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; }
-            //     &:nth-child(6) { border: 1px solid #E488FF; color:#E488FF; box-shadow:#E488FF 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;}
-
-            // }
+    
         }
-        // .contact-box {
-
-        //     background: linear-gradient(-180deg, #8d5cff, #FF616B, #FFE488, #8CFF85, #80C7FF, #E488FF);
-        //     background-size: 300% 300%;
-        //     animation: gradient 1s ease-in-out infinite;
-        // }
-        
-        // @keyframes gradient {
-        //     0% {
-        //         background-position: 0% 50%;
-        //     }
-        //     50% {
-        //         background-position: 100% 50%;
-        //     }
-        //     100% {
-        //         background-position: 0% 50%;
-        //     }
-        // }
- 
-//             background-color: #fff;
-// background: linear-gradient(124deg, #8d5cff, #FF616B, #FFE488, #8CFF85, #80C7FF, #E488FF);
-// background-size: 1800% 1800%;
-
-
-
-
-// -webkit-box-shadow: 2px 2px 12px 2px #fff, -9px 2px 12px 2px #FF616B, -7px -2px 12px 2px #FFE488, 12px -2px 12px 2px #8CFF85, 12px 10px 12px 7px #80C7FF, -10px 10px 12px 7px #E488FF, -10px -7px 27px 1px #8d5cff, 2px 2px 13px -24px rgba(0,0,0,0); 
-// box-shadow: 2px 2px 12px 2px #fff, -6px 2px 12px 2px #FF616B, -4px -2px 12px 2px #FFE488, 10px -2px 10px 2px #8CFF85, 12px 10px 12px 4px #80C7FF, -10px 10px 8px 4px #FF616B, -10px -7px 27px 1px #8d5cff, 2px 2px 13px -24px rgba(0,0,0,0);
-
-
-// -webkit-box-shadow: 1px 1px 11px 1px #FF8080, -7px 1px 11px 1px #FFE488, -4px -4px 12px 4px #8CFF85, 8px -1px 11px 1px #80C7FF, 8px 6px 12px 4px #E488FF, -2px 2px 11px 4px #FF616B, -6px -4px 16px 1px #8E5CFF, 0px 0px 9px -16px rgba(0,0,0,0); 
-// box-shadow: 1px 1px 11px 1px #FF8080, -7px 1px 11px 1px #FFE488, -4px -1px 11px 1px #8CFF85, 8px -1px 11px 1px #80C7FF, 8px 6px 11px 4px #E488FF, -2px 2px 11px 4px #FF616B, -6px -4px 16px 1px #8E5CFF, 0px 0px 9px -16px rgba(0,0,0,0); 
-
-// -webkit-animation: rainbow 3s ease infinite;
-// -z-animation: rainbow 3s ease infinite;
-// -o-animation: rainbow 3s ease infinite;
-//   animation: rainbow 3s ease infinite;}
-
-// @-webkit-keyframes rainbow {
-//     0%{background-position:0% 82%}
-//     50%{background-position:100% 19%}
-//     100%{background-position:0% 82%}
-// }
-// @-moz-keyframes rainbow {
-//     0%{background-position:0% 82%}
-//     50%{background-position:100% 19%}
-//     100%{background-position:0% 82%}
-// }
-// @-o-keyframes rainbow {
-//     0%{background-position:0% 82%}
-//     50%{background-position:100% 19%}
-//     100%{background-position:0% 82%}
-// }
-// @keyframes rainbow { 
-//     0%{background-position:0% 82%}
-//     50%{background-position:100% 19%}
-//     100%{background-position:0% 82%}
-//         }
-
-
-//         .bio-button{
-//             position: relative;
-//             background: white;
-//             &:before {
-//                 content: "";
-//                 z-index: -1;
-//                 position: absolute;
-//                 top: 0;
-//                 right: 0;
-//                 bottom: 0;
-//                 left: 0;
-//                 background: linear-gradient(to top left, #ff3d00 0%, #0400ff 100% );
-//                 transform: translate3d(0px, 20px, 0) scale(0.95);
-//                 filter: blur(20px);
-//                 opacity: var(0.7);
-//                 transition: opacity 0.3s;
-//               }
-
-//             -webkit-box-shadow: 0px 0px 0px 2px #8d5cff, 0px 0px 0px 4px #FF616B, 0px 0px 0px 6px #FFE488, 0px 0px 0px 8px #8CFF85, 0px 0px 0px 10px #80C7FF, 4px 2px 13px -24px rgba(0,0,0,0); 
-// box-shadow: 0px 0px 0px 2px #8d5cff, 0px 0px 0px 4px #FF616B, 0px 0px 0px 6px #FFE488, 0px 0px 0px 8px #8CFF85, 0px 0px 0px 10px #80C7FF, 2px 2px 13px -24px rgba(0,0,0,0);
-
-// //             background-color: #fff;
-// //                     -webkit-box-shadow: 1px 1px 11px 1px #FF8080, -7px 1px 11px 1px #FFE488, -4px -4px 15px 4px #8CFF85, 8px -1px 11px 1px #80C7FF, 8px 6px 15px 4px #E488FF, -5px 5px 11px 4px #FF616B, -6px -4px 16px 1px #8E5CFF, 0px 0px 9px -16px rgba(0,0,0,0); 
-// // box-shadow: 1px 1px 11px 1px #FF8080, -7px 1px 11px 1px #FFE488, -4px -1px 11px 1px #8CFF85, 8px -1px 11px 1px #80C7FF, 8px 6px 11px 4px #E488FF, -5px 5px 11px 4px #FF616B, -6px -4px 16px 1px #8E5CFF, 0px 0px 9px -16px rgba(0,0,0,0); 
-
-// // background-color: rgba(255, 255, 255, 0.9);
-// // box-shadow: 0 0 10px 2px rgb(255, 255, 255, 0.9);
-//         }  
+   
         
         .theme-options{
-
-
             background-color: rgba(255, 255, 255, 0.1);
-            box-shadow: none;
-        
-        
-
-
-
-
-            // border-radius: 30px;
-            // background-image:   linear-gradient(70deg, #8d5cff, #FF616B, #FFE488, #8CFF85, #80C7FF),
-            // linear-gradient(70deg, #8d5cff, #FF616B, #FFE488, #8CFF85, #80C7FF);
-            // background-clip: content-box, border-box;
-            // opacity: 0.7;
-            
-//                -webkit-box-shadow: 0px -5px 10px 0px #4B0082, 4PX -9px 10px 0px #0000FF, 10px -14px 10px 0px #00FF00, 20px -17px 10px 0px #FFFF00, 24px -19px 10px 0px #FF7F00, 27px -23px 10px 0px #FF0000, 2px 2px 13px -24px rgba(0,0,0,0); 
-//    box-shadow: 0px -5px 10px 0px #4B0082, 4PX -9px 10px 0px #0000FF, 06px -14px 10px 0px #00FF00, 20px -17px 10px 0px #FFFF00, 24px -19px 10px 0px #FF7F00, 27px -23px 10px 0px #FF0000, 2px 2px 13px -24px rgba(0,0,0,0);
-//    background: #fff;
-  
-
-// background-color: rgba(255, 255, 255, 0.7);
-// -webkit-box-shadow: 4px -2px 12px 4px #8d5cff, 2px -2px -12px 0px #FF616B, 16px -14px 40px 0px #FFE488, 20px -17px 10px 0px #8CFF85, 24px -19px 10px 0px #80C7FF, 27px -23px 10px 0px #E488FF, -9px -9px 16px -24px rgba(0,0,0,0); 
-// box-shadow: 0px 20px 40px 4px #80C7FF, 0px 48px 40px 0px #FF616B, 0px 4px 40px 40px #FFE488, 0px -37px 40px 0px #8CFF85, 0px -19px 40px 0px #80C7FF, 0px -12px 40px 20px #E488FF, -9px -9px 16px -24px rgba(0,0,0,0);
-
-
-// background-color: rgba(255, 255, 255, 0);
-//             -webkit-box-shadow: 0px 0px 0px 8px #8d5cff, 0px 0px 0px 16px #FF616B, 0px 0px 0px 23px #FFE488, 0px 0px 0px 30px #8CFF85, 0px 0px 0px 40px #80C7FF, 4px 2px 13px -24px rgba(0,0,0,0); 
-// box-shadow: 0px 0px 0px 4px #8d5cff, 0px 0px 0px 8px #FF616B, 0px 0px 0px 12px #FFE488, 0px 0px 0px 16px #8CFF85, 0px 0px 0px 20px #80C7FF, 2px 2px 13px -24px rgba(0,0,0,0);
-// opacity: 0.9;
-// margin-left: 2%;
-    
+            box-shadow: none;  
     }
 
 
@@ -387,12 +226,7 @@ header-box {
 }
 
 
-//         .theme-options {
-
- 
-//    -webkit-box-shadow: 7px -5px 10px 0px #4B0082, 11px -9px 10px 0px #0000FF, 16px -14px 10px 0px #00FF00, 20px -17px 10px 0px #FFFF00, 24px -19px 10px 0px #FF7F00, 27px -23px 10px 0px #FF0000, 2px 2px 13px -24px rgba(0,0,0,0); 
-//    box-shadow: 7px -5px 10px 0px #4B0082, 11px -9px 10px 0px #0000FF, 16px -14px 10px 0px #00FF00, 20px -17px 10px 0px #FFFF00, 24px -19px 10px 0px #FF7F00, 27px -23px 10px 0px #FF0000, 2px 2px 13px -24px rgba(0,0,0,0);
-//    background: #fff;
-//         }
  
     }}
+
+    
