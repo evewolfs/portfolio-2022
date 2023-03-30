@@ -2,6 +2,7 @@ import React from 'react'
 import Head from "next/head";
 import { PostCard } from "../components";
 import { getPosts } from "../services";
+import { RichText } from '@graphcms/rich-text-react-renderer';
 
 
 export default function Home({ posts }) {

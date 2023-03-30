@@ -1,11 +1,12 @@
 import { request, gql } from "graphql-request";
+import { RichText } from '@graphcms/rich-text-react-renderer';
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 
 export const getPosts = async () => {
   const query = gql`
     query MyQuery {
-      postsConnection {
+      postsConnection (first: 14 orderBy: orderNumber_ASC) {
         edges {
           node {
             createdAt
@@ -13,6 +14,8 @@ export const getPosts = async () => {
             title
             excerpt
             websiteLink
+            orderNumber
+            videoLink
             featuredImage {
               url
             }
@@ -21,7 +24,10 @@ export const getPosts = async () => {
               slug
             }
             content {
-              text
+              raw
+            }
+            process {
+              raw
             }
           }
         }
@@ -59,6 +65,8 @@ export const getCategoryPost = async (slug) => {
             title
             excerpt
             websiteLink
+            orderNumber
+            videoLink
             featuredImage {
               url
             }
@@ -67,7 +75,10 @@ export const getCategoryPost = async (slug) => {
               slug
             }
             content {
-              text
+              raw
+            }
+            process {
+              raw
             }
           }
         }

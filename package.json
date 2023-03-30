@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@graphcms/rich-text-react-renderer": "^0.6.1",
     "framer-motion": "^7.10.0",
     "graphql": "^16.6.0",
     "graphql-request": "^5.0.0",
