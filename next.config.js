@@ -1,2 +1,12 @@
 module.exports = {
-  reactStrictMode: true,}
+  reactStrictMode: true,
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/',
+  //       destination: '/category/all',
+  //       permanent: true,
+  //     },
+  //   ]
+  // },
+}

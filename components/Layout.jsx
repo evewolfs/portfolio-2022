@@ -49,13 +49,24 @@ localStorage.setItem('theme-color', theme)
        
         {isBioOpen &&
 (  <motion.div className="p-bio">
-Hello, 
+{/* Hello,<br/>
+I am a freelance digital designer and developer.<br/>
+Based and born in Brussels (1990), I grew up with an art teacher grandmother, and a graphic designer mother crafting advertising from our backyard - where I discovered the world of cheesy stock photos books, and brush effects on painter Mac. From the age of 5, I spent 8 years building a 6 m² smurf village; collecting 384 figurines and tinkering bespoke stories and mushroom facilities. Until the day I realised I needed to serve larger impact projects, for real people. That’s how I studied industrial design, user research, and front-end development. Since 2013, I’ve enjoyed working for a wide range of clients such as The World Bank, Samsung, The Free University of Brussels (VUB) and my plumber. 
+I’ve worked on 3 continents, with many awesome collaborators, always different design briefs, and a wide palet of job titles. From scratch to the launch of a digital project, I appreciate every step of the process, which by the way also includes meeting new people. So don’t hesitate to contact me :) Telkens ook in het Nederlands, et d'ailleurs aussi en français.           */}
+Hello,<br/>
+I am a freelance digital designer and developer.<br/>
+
+Based and born in Brussels (1990), I grew up with an art teacher grandmother, and a graphic designer mother crafting advertising from our backyard - where I fell in love with Pantone markers and air brush effects on Painter Mac.
 <br/>
-I am a freelance designer and developer.
+Later on, I graduated from an industrial design master (2015) and spent 3 years working as a UX designer & design researcher with a few design agencies. Obsessed to understand all about user behaviours, tastes and needs, I met many of them and contributed to VR, AR, AI, IOT, Apps, and intranet projects. I wrote and read a lot of reports for big brands, and also had the pleasure to design some screen flows. This motivated me to learn front-end development in a class, and alone. To finally design, develop and sell websites for small clients since 2020. Since 2013, I’ve enjoyed working for a wide range of clients such as The World Bank, Samsung, The Free University of Brussels (VUB) and my plumber. I’ve worked on 3 continents, with many awesome collaborators, various design job titles, and always different briefs.
 <br/>
-Born in Brussels, I was raised by a graphic designer mother working in advertising,  an art teacher grandma’ always up for building something alongside with my grandfather - a social house builder. 
-I started my first project at 6 : a 5m2 smurf village,  holding 374 figurines, and all facilities a smurf need to smurf a healthy community life. I spent 8 tedious years trying to make every smurf fit in the scene, to finally realise I needed to serve larger impact projects. And that’s how I studied industrial design, user research and front-end developement. Since then, I’ve enjoyed working for a wide range of clients (such as The World Bank or my plumber) with many awesome collaborators, various job titles, and always different design briefs. From scratch to the launch, I truly appreciate every single part of the process, including meeting new people. So don’t hesitate to contact me :)
-           </motion.div>)}
+I love to figure out complex digital systems for users that are not like me. As well as designing and developing interfaces triggering a sense of adequacy and clarity to their users.
+<br/>
+From scratch to the launch of a digital project and beyond, I prefer and appreciate being involved in every step of the process, which by the way includes meeting new people. So don’t hesitate to contact me :) 
+ook in het Nederlands, et aussi en français!
+
+
+ </motion.div>)}
           </motion.div>
           <ButtonContact />
           </motion.div>
@@ -63,10 +74,10 @@ I started my first project at 6 : a 5m2 smurf village,  holding 374 figurines, a
          
   
         <motion.div className="theme-options">
-       <BsSun size={20} id='theme-sun' onClick={() => handleClick('theme-sun')} className={`${colorTheme === 'theme-sun' ? 'active' : ''}`} />
-       <BsCloud  size={22} id='theme-cloud' onClick={() => handleClick('theme-cloud')} className={`${colorTheme === 'theme-cloud' ? 'active' : ''}`} />
-       <BsRainbow size={24} id='theme-rainbow' onClick={() => handleClick('theme-rainbow')} className={`${colorTheme === 'theme-rainbow' ? 'active' : ''}`}  />
-       <BsMoon size={18} id='theme-moon' onClick={() => handleClick('theme-moon')} className={`${colorTheme === 'theme-moon' ? 'active' : ''}`}  />
+       <BsSun size={18} id='theme-sun' onClick={() => handleClick('theme-sun')} className={`${colorTheme === 'theme-sun' ? 'active' : ''}`} />
+       <BsCloud  size={20} id='theme-cloud' onClick={() => handleClick('theme-cloud')} className={`${colorTheme === 'theme-cloud' ? 'active' : ''}`} />
+       <BsRainbow size={22} id='theme-rainbow' onClick={() => handleClick('theme-rainbow')} className={`${colorTheme === 'theme-rainbow' ? 'active' : ''}`}  />
+       <BsMoon size={16} id='theme-moon' onClick={() => handleClick('theme-moon')} className={`${colorTheme === 'theme-moon' ? 'active' : ''}`}  />
       </motion.div>
     
      

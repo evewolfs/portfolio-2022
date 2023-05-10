@@ -15,7 +15,6 @@ const CategoryPost = ({ posts }) => {
     
       <div className="selected-category">
           <br/>
-        <Link className="button-back" href="/">back to all projects</Link>
 
           {posts.map((post, index) => (
             <PostCard key={index} post={post.node} />

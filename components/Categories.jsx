@@ -18,6 +18,7 @@ const Categories = () => {
         className={`categories ${active == category && 'active'}`} id="cat-link">
             {category.name}
         </Link>
+        
       ))}
     </div>
     </div>
