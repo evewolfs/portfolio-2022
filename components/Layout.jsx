@@ -50,17 +50,20 @@ localStorage.setItem('theme-color', theme)
         {isBioOpen &&
 (  <motion.div className="p-bio">
 
-Hello,<br/>
-I am a freelance digital designer and developer.<br/>
+Hello,
+I am a freelance digital designer and developer.
+<br/><br/>
+Based and born in Brussels (1990), I grew up with an art teacher grandmother, and a graphic designer mother crafting advertising from our backyard - where I doodled with Pantone markers and Macintosh air brushes from an early age. 
+<br/><br/>
+Later on, I graduated from an industrial design master (2015) and spent 3 years working as a UX designer & design researcher with a few design agencies. Obsessed to understand all about user behaviours, tastes and needs, I met many of them and wrote a lot of reports. 
+<br/>
+To realise I enjoyed the research phase as much as the production phase. Which led me to study front-end development (2019) and start selling websites and digital design.
+<br/><br/>
+Since 2013, I’ve enjoyed working for a wide range of clients such as The World Bank, The Free University of Brussels, and my plumber.
+ <br/>
+I love to figure out complex digital systems, and design interfaces triggering a sense of adequacy and clarity to their users.
 
-Based and born in Brussels (1990), I grew up with an art teacher grandmother, and a graphic designer mother crafting advertising from our backyard - where I discovered Painter Mac air brush effects and Pantone markers.
-<br/>
-Later on, I graduated from an industrial design master (2015) and spent 3 years working as a UX designer & design researcher with a few design agencies. Obsessed to understand all about user behaviours, tastes and needs, I met many of them and wrote a lot of reports. At the time, I also had the pleasure to design some screen flows, which motivated me to learn front-end development in a class, and alone. I then began designing, developing and selling websites as a freelancer from 2020 on. Since 2013, I’ve enjoyed working for a wide range of clients such as The World Bank, The Free University of Brussels (VUB) and my plumber. I’ve worked on 3 continents, with many awesome collaborators, various design job titles, and always different briefs.
-<br/>
-I love to figure out complex digital systems for people that are not like me. As well as designing and developing interfaces triggering a sense of adequacy and clarity to their users.
-<br/>
-From scratch to the launch and beyond, I prefer and appreciate being involved in every step of the process, which by the way includes meeting new people. So don’t hesitate to contact me :) 
- </motion.div>)}
+</motion.div>)}
           </motion.div>
           <ButtonContact />
           </motion.div>

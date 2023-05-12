@@ -29,7 +29,6 @@ body {
   font-family: letter-gothic-std, monospace;
 font-weight: 700;
 font-style: normal;
-
   letter-spacing: -0.8px;
   
   
@@ -150,13 +149,14 @@ vertical-align: middle;
   cursor: pointer;
   font-size: 14px;
   width: fit-content;
-  padding: 0.5% 2%;
   border-radius: 40px;
   height: 40px;
-  padding: 1% 2%;
+  padding: 2%;
   margin-right: 2%;
-  margin-top: 2%;
-  margin-left: -0.5%;
+  font-family: neue-haas-grotesk-text, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: normal;
 }
 
 
@@ -279,11 +279,15 @@ vertical-align: middle;
 
 .post-title{
 
-font-size: 20px;
+font-size: 22px;
 // width: 66%;
 margin:1% 0;
 margin-top: 4%;
-letter-spacing: -0.8px;
+font-family: neue-haas-grotesk-text, sans-serif;
+font-weight: 300;
+font-style: normal;
+letter-spacing: normal;
+
 
 
 }
@@ -291,10 +295,12 @@ letter-spacing: -0.8px;
 .post-excerpt{
   font-size: 16px;
   line-height: 22px;
-  font-weight: 300;
-  // font-style: italic;
   margin-bottom: 2%;
-  // text-transform: uppercase;
+  font-family: letter-gothic-std, monospace;
+  font-weight: 700;
+  font-style: normal;
+    letter-spacing: -0.8px;
+
  
 }
 
@@ -324,16 +330,15 @@ box-shadow: none;}
   display: inline-flex;
   flex-direction:row;
   flex-wrap: wrap;
-
-  font-size: 12px;
+  font-family: neue-haas-grotesk-text, sans-serif;
+  font-size: 13px;
   // text-decoration: underline;
   border: none;
   margin-top: 6%;
-  font-family: letter-gothic-std, monospace;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   line-height: 22px;
-    letter-spacing: -0.8px;
+    letter-spacing: 0;
 
 
 
@@ -355,6 +360,10 @@ width: fit-content;
 padding: 0 2%;
 margin: 2% 0;
 float: left;
+font-family: letter-gothic-std, monospace;
+font-weight: 700;
+font-style: normal;
+  letter-spacing: -0.8px;
 
 
 
@@ -375,6 +384,10 @@ a
   margin: 2% 0;
   float: left;
   margin-right: 10px;
+  font-family: letter-gothic-std, monospace;
+  font-weight: 700;
+  font-style: normal;
+    letter-spacing: -0.8px;
   a
   {box-shadow: none;
     display: flex;
