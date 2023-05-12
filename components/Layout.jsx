@@ -49,23 +49,17 @@ localStorage.setItem('theme-color', theme)
        
         {isBioOpen &&
 (  <motion.div className="p-bio">
-{/* Hello,<br/>
-I am a freelance digital designer and developer.<br/>
-Based and born in Brussels (1990), I grew up with an art teacher grandmother, and a graphic designer mother crafting advertising from our backyard - where I discovered the world of cheesy stock photos books, and brush effects on painter Mac. From the age of 5, I spent 8 years building a 6 m² smurf village; collecting 384 figurines and tinkering bespoke stories and mushroom facilities. Until the day I realised I needed to serve larger impact projects, for real people. That’s how I studied industrial design, user research, and front-end development. Since 2013, I’ve enjoyed working for a wide range of clients such as The World Bank, Samsung, The Free University of Brussels (VUB) and my plumber. 
-I’ve worked on 3 continents, with many awesome collaborators, always different design briefs, and a wide palet of job titles. From scratch to the launch of a digital project, I appreciate every step of the process, which by the way also includes meeting new people. So don’t hesitate to contact me :) Telkens ook in het Nederlands, et d'ailleurs aussi en français.           */}
+
 Hello,<br/>
 I am a freelance digital designer and developer.<br/>
 
-Based and born in Brussels (1990), I grew up with an art teacher grandmother, and a graphic designer mother crafting advertising from our backyard - where I fell in love with Pantone markers and air brush effects on Painter Mac.
+Based and born in Brussels (1990), I grew up with an art teacher grandmother, and a graphic designer mother crafting advertising from our backyard - where I discovered Painter Mac air brush effects and Pantone markers.
 <br/>
-Later on, I graduated from an industrial design master (2015) and spent 3 years working as a UX designer & design researcher with a few design agencies. Obsessed to understand all about user behaviours, tastes and needs, I met many of them and contributed to VR, AR, AI, IOT, Apps, and intranet projects. I wrote and read a lot of reports for big brands, and also had the pleasure to design some screen flows. This motivated me to learn front-end development in a class, and alone. To finally design, develop and sell websites for small clients since 2020. Since 2013, I’ve enjoyed working for a wide range of clients such as The World Bank, Samsung, The Free University of Brussels (VUB) and my plumber. I’ve worked on 3 continents, with many awesome collaborators, various design job titles, and always different briefs.
+Later on, I graduated from an industrial design master (2015) and spent 3 years working as a UX designer & design researcher with a few design agencies. Obsessed to understand all about user behaviours, tastes and needs, I met many of them and wrote a lot of reports. At the time, I also had the pleasure to design some screen flows, which motivated me to learn front-end development in a class, and alone. I then began designing, developing and selling websites as a freelancer from 2020 on. Since 2013, I’ve enjoyed working for a wide range of clients such as The World Bank, The Free University of Brussels (VUB) and my plumber. I’ve worked on 3 continents, with many awesome collaborators, various design job titles, and always different briefs.
 <br/>
-I love to figure out complex digital systems for users that are not like me. As well as designing and developing interfaces triggering a sense of adequacy and clarity to their users.
+I love to figure out complex digital systems for people that are not like me. As well as designing and developing interfaces triggering a sense of adequacy and clarity to their users.
 <br/>
-From scratch to the launch of a digital project and beyond, I prefer and appreciate being involved in every step of the process, which by the way includes meeting new people. So don’t hesitate to contact me :) 
-ook in het Nederlands, et aussi en français!
-
-
+From scratch to the launch and beyond, I prefer and appreciate being involved in every step of the process, which by the way includes meeting new people. So don’t hesitate to contact me :) 
  </motion.div>)}
           </motion.div>
           <ButtonContact />

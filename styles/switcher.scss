@@ -39,6 +39,11 @@ body {
             }
 }
 
+@media only screen and (max-width: 629px) {
+    .theme-options {margin-left: 4%;}
+
+}
+
 .content-box {
     margin: 0 auto;
     background-color: transparent;

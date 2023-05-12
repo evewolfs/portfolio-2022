@@ -9,15 +9,15 @@ export default function Home({ posts }) {
 
 
   return (
-    <div className="m-8" >
+    <div className="children-body" >
     
       <Head>
         <title>ève wolfs</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
     
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <div className="col-span-12">
+      <div className="post-box">
+        <div className="post-row">
           {" "}
           {posts.map((post) => (
             <PostCard post={post.node} key={post.title} 
