@@ -12,7 +12,7 @@ body {
 }
 
 .post-container{
-margin: 4% 2%;
+// margin: 4% 2%;
 }
 
 
@@ -22,7 +22,7 @@ margin: 4% 2%;
    display: inline-flex;
    padding: 0.5%;
    margin: 1%;
-   margin-right: 2%;
+//    margin-right: 2%;
    cursor: pointer;
   width:fit-content;
   height: 40px;
@@ -44,12 +44,13 @@ margin: 4% 2%;
 }
 
 @media only screen and (max-width: 629px) {
-    .theme-options {margin-left: 4%;}
+    .theme-options {margin-left: 1%;}
 
 }
 
 .content-box {
-    margin: 0 auto;
+    margin: 0;
+    padding: 2%;
     background-color: transparent;
 width: 100%;
     h3{
@@ -70,6 +71,15 @@ width: 100%;
 
 }
 
+@media only screen and (max-width: 629px) {
+    .content-box {
+        margin: 0;
+        padding: 0;
+
+    width: 100%;
+}
+
+}
 
   
   

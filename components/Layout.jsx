@@ -52,13 +52,11 @@ localStorage.setItem('theme-color', theme)
 
 Based and born in Brussels (1990), I grew up with an art teacher grandmother, and a graphic designer mother crafting advertising from our backyard.
  <br/>
-I graduated from an industrial design master (2015) and spent 3 years working as a UX designer & design researcher with a few design agencies. Obsessed to understand all about users’ behaviours, needs and tastes, I met a ton of them and wrote a lot of reports. Curious to dive deeper in the making of the digital world, I studied front-end development (2019) and started selling websites and digital design 6 months later.
-<br/>
-Since 2013, I’ve enjoyed collaborating with a wide range of clients such as The World Bank, The Free University of Brussels, and my plumber.
+I graduated from an industrial design master (2015) and spent almost 4 years working as a UX designer & design researcher with a few design agencies. Obsessed to understand all about users’ behaviours, needs and tastes, I met a lot of them, wrote many reports and designed a few screen flows. 
  <br/>
-I love to figure out digital systems, design visual identities, and matching interfaces triggering a sense of adequacy and clarity to their users. 
+Curious to dive deeper in digital production, I studied front-end development (2019) and started selling websites and digital design a few months later.  Since 2013, I’ve enjoyed collaborating with a wide range of clients such as The World Bank, The Free University of Brussels, and my plumber.
  <br/>
-From scratch to the launch, I appreciate being involved in every step of the process, which by the way includes meeting people. So don’t hesitate to contact me :)
+From scratch to the launch and beyond, I appreciate being involved in every step of the process, which by the way includes meeting new people. So don’t hesitate to contact me :)
 
 </motion.div>)}
           </motion.div>
