@@ -50,18 +50,15 @@ localStorage.setItem('theme-color', theme)
         {isBioOpen &&
 (  <motion.div className="p-bio">
 
-Hello,
-I am a freelance digital designer and developer.
-<br/><br/>
-Based and born in Brussels (1990), I grew up with an art teacher grandmother, and a graphic designer mother crafting advertising from our backyard - where I doodled with Pantone markers and Macintosh air brushes from an early age. 
-<br/><br/>
-Later on, I graduated from an industrial design master (2015) and spent 3 years working as a UX designer & design researcher with a few design agencies. Obsessed to understand all about user behaviours, tastes and needs, I met many of them and wrote a lot of reports. 
-<br/>
-To realise I enjoyed the research phase as much as the production phase. Which led me to study front-end development (2019) and start selling websites and digital design.
-<br/><br/>
-Since 2013, I’ve enjoyed working for a wide range of clients such as The World Bank, The Free University of Brussels, and my plumber.
+Based and born in Brussels (1990), I grew up with an art teacher grandmother, and a graphic designer mother crafting advertising from our backyard.
  <br/>
-I love to figure out complex digital systems, and design interfaces triggering a sense of adequacy and clarity to their users.
+I graduated from an industrial design master (2015) and spent 3 years working as a UX designer & design researcher with a few design agencies. Obsessed to understand all about users’ behaviours, needs and tastes, I met a ton of them and wrote a lot of reports. Curious to dive deeper in the making of the digital world, I studied front-end development (2019) and started selling websites and digital design 6 months later.
+<br/>
+Since 2013, I’ve enjoyed collaborating with a wide range of clients such as The World Bank, The Free University of Brussels, and my plumber.
+ <br/>
+I love to figure out digital systems, design visual identities, and matching interfaces triggering a sense of adequacy and clarity to their users. 
+ <br/>
+From scratch to the launch, I appreciate being involved in every step of the process, which by the way includes meeting people. So don’t hesitate to contact me :)
 
 </motion.div>)}
           </motion.div>
