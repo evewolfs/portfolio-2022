@@ -35,7 +35,7 @@ const PostCard = ({ post, category }) => {
 
     
   return (
-    
+ 
     <div className="wrapper">
 <div class="box content">
 {getExtension(post.featuredImage.url).toLowerCase() == 1 ? 
@@ -105,7 +105,6 @@ controls
    
      </div>
      </div>
-       
     
 
   );

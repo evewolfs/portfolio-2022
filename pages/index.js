@@ -16,15 +16,13 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
     
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <div className="col-span-12">
+        <div className="content-box">
           {" "}
           {posts.map((post) => (
             <PostCard post={post.node} key={post.title} 
             />
           ))}
         </div>
-      </div>
       </div>
    
   );

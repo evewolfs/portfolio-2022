@@ -1,9 +1,5 @@
 import React  from "react";
-import TextSlider from "./TextSlider";
-import { SliderData } from "./SliderData";
 import ButtonContact from "./ButtonContact";
-import ButtonGit from "./ButtonGit";
-import BioButton from "./BioButton";
 
 
 const Header = (props) => {
