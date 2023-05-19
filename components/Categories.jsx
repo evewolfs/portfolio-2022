@@ -11,7 +11,7 @@ const Categories = () => {
   }, []);
 
   return (
-
+<div className="categories-container">
  <div className="categories"> 
       {categories.map((category) => (
         <Link key={category.slug} href={`/category/${category.slug}`} onClick={() => setActive(category)}
@@ -20,7 +20,7 @@ const Categories = () => {
         </Link>
         
       ))}
-    </div>
+    </div></div>
 
   );
 };
