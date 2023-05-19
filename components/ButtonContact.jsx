@@ -5,7 +5,7 @@ const ButtonContact = () => {
   return (
     <div className="contact-box">
       <a href="mailto:info@evewolfs.net">
-          <SlBubble size={20} />{" "}
+          <SlBubble size={18} />{" "}
     
       </a>
     </div>

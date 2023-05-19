@@ -47,61 +47,65 @@ controls
     src={post.featuredImage.url}
     alt={post.title}
     className=" object-cover w-full rounded-t-lg md:h-auto"
-  />) :(<img  className="img-box" src={post.featuredImage.url} />) }
-
-
+  />) :(<img  className="img-box" src={post.featuredImage.url} />)}
    </div>
 
 <div class="box sidebar">
-  <div className="info-box">
+  
       <motion.h1
         className="post-title">
         {post.title}
       </motion.h1>
-          <motion.p className="post-excerpt">
+          <motion.h1 className="post-client">
             {post.excerpt}
-          </motion.p>
+          </motion.h1>
 
-        
-
-         
-          <motion.div onClick={handleMore} transition={{layout: {duration: 1, type: "spring"}}} > 
-          {isOpen &&
-(  
-<motion.p className="p-text">
-
-{post.content.raw &&
-<RichText content={post.content.raw}/>}
-<br/>
-
-{post.process.raw &&
-<RichText content={post.process.raw}/>}   
-          </motion.p>)}
-
-          <motion.button className="more-button">
-     {isActive ? <div>- info</div> : <div>+ info </div>}
-          </motion.button>
-
-    </motion.div>
-    <>
- {post.websiteLink &&
-    <div className="web-link"><a
-        href={post.websiteLink}
-        target="_blank"
-        rel="noreferrer"
-      ><BsArrowUpRight size={11} style={{marginRight:'8px'}}/> website</a></div>}</>
-
-     
-     
-<div className="categories-card">
+          <div className="categories-box">
       {post.categories.filter(category => category.name !== 'all').map((category) => (
         <Link key={category.slug} href={`/category/${category.slug}`} onClick={() => setActive(category)}
         className={`categories-cards ${active == category && 'active'}`}>
           {category.name} <span>&#160;|&#160;</span>
         </Link> 
       ))}
-            </div> 
-          </div>
+            </div>    
+
+         
+          <motion.div onClick={handleMore} transition={{layout: {duration: 1, type: "spring"}}} > 
+          {isOpen &&
+(  
+
+  
+<motion.p className="p-text">
+
+
+{post.content.raw &&
+<RichText content={post.content.raw}/>}
+<br/>
+
+{post.process.raw &&
+<RichText content={post.process.raw}/>}  
+
+<>
+ {post.websiteLink &&
+    <motion.div className="web-link"><a
+        href={post.websiteLink}
+        target="_blank"
+        rel="noreferrer"
+      >{post.websiteLink}</a></motion.div>}</>
+
+
+          </motion.p>)}
+
+
+          <motion.button className="more-button">
+     {isActive ? <div>less -
+     </div> : <div>more +</div>}
+          </motion.button>
+
+    </motion.div>
+
+
+   
    
      </div>
      </div>
