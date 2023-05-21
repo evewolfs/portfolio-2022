@@ -5,11 +5,12 @@ import { useState, useRef, useEffect } from "react";
 import { getCategories } from "../services";
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import { BsArrowUpRight } from 'react-icons/bs'
+import Carousel from "./Carousel";
 
 
 
 
-
+ 
 
 
 const PostCard = ({ post, category }) => {
@@ -38,6 +39,15 @@ const PostCard = ({ post, category }) => {
  
     <div className="wrapper">
 <div class="box content">
+{/* <div className="carousel-container">
+        
+        <div className="Carousel">
+            {post.featuredImg.map((post, idx) => (<div className="carousel-item" key={`${idx}-${post.title}`}>
+<img src={post.featuredImg.url} />
+            </div>))}
+        </div>
+    </div> */}
+
 {getExtension(post.featuredImage.url).toLowerCase() == 1 ? 
            (<video
     playsInline

@@ -55,9 +55,11 @@ Based and born in Brussels (1990), I grew up with an art teacher grandmother, an
  <br/>
 I graduated from an industrial design master (2015) and spent almost 4 years working as a UX designer and design researcher with a few design agencies. Obsessed to understand all about users’ behaviours, needs and tastes, I met a lot of them, wrote many reports and designed several screen flows. 
 
-Curious to dive deeper in digital production, I studied front-end development (2019) and started selling websites and digital design a few months later.  Since 2013, I’ve enjoyed collaborating with a wide range of clients such as The World Bank, an architecture office, The Free University of Brussels, and my plumber.
+Curious to dive deeper in digital production, I studied front-end development (2019) and started selling websites and digital design a few months later.  
  <br/>
-From scratch to the launch, I appreciate every step of the process, which also includes meeting new people. So don’t hesitate to contact me :)
+From scratch to the launch, I appreciate every step of the process. I mostly enjoy designing tidy interfaces triggering a sense of clarity.
+<br/>
+Since 2013, I’ve enjoyed collaborating with a wide range of clients such as The World Bank, the architecture office BouwhulpGroep, The Free University of Brussels, and my plumber. I am always happy to meet new people so don't hesitate to contact me :)
 
 </motion.div>)}
           </motion.div>

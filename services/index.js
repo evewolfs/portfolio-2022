@@ -16,6 +16,9 @@ export const getPosts = async () => {
             websiteLink
             orderNumber
             videoLink
+            featuredImg {
+              url
+            }
             featuredImage {
               url
             }
@@ -71,6 +74,9 @@ export const getCategoryPost = async (slug) => {
             websiteLink
             orderNumber
             videoLink
+            featuredImg {
+              url
+            }
             featuredImage {
               url
             }
