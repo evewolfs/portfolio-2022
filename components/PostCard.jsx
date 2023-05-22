@@ -21,10 +21,12 @@ function Arrow(props) {
       viewBox='0 0 24 24'
     >
       {props.left && (
-        <path d='M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z' />
+        // <path d='M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z' />
+        <div className="small-chevron"> &#8592;</div>
       )}
       {!props.left && (
-        <path d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z' />
+        // <path d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z' />
+        <div className="small-chevron">&#8594;</div>
       )}
     </svg>
   );
@@ -39,9 +41,9 @@ const PostCard = ({ post, category }) => {
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
-    // slideChanged(slider) {
-    //   setCurrentSlide(slider.track.details.rel);
-    // },
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
+    },
     created() {
       setLoaded(true);
     },
@@ -144,6 +146,23 @@ const PostCard = ({ post, category }) => {
             </>
           )}
         </div>
+        {loaded && instanceRef.current && (
+        <div className="dots">
+          {[
+            ...Array(instanceRef.current.track.details.slides.length).keys(),
+          ].map((idx) => {
+            return (
+              <button
+                key={idx}
+                onClick={() => {
+                  instanceRef.current?.moveToIdx(idx)
+                }}
+                className={"dot" + (currentSlide === idx ? " active" : "")}
+              ></button>
+            )
+          })}
+        </div>
+      )}
       </div>
 
       <div class='box sidebar'>
