@@ -4,8 +4,6 @@ import { motion } from 'framer-motion';
 import { useState, useRef, useEffect } from 'react';
 import { getCategories } from '../services';
 import { RichText } from '@graphcms/rich-text-react-renderer';
-import { BsArrowUpRight } from 'react-icons/bs';
-import Carousel from './Carousel';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 
