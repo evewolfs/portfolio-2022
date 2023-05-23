@@ -59,43 +59,18 @@ const PostCard = ({ post, category }) => {
     setIsOpen(!isOpen);
   };
 
-  const getExtension = (featuredImage) => {
-    return featuredImage.split('.').pop();
-  };
 
   return (
     <div className='wrapper'>
+    
+
       <div class='box content'>
-        {/* <div className="carousel-container">
-        
-        <div className="Carousel">
-            {post.featuredImg.map((post, idx) => (<div className="carousel-item" key={`${idx}-${post.title}`}>
-<img src={post.featuredImg.url} />
-            </div>))}
-        </div>
-    </div> */}
-
-        {/* {getExtension(post.featuredImage.url).toLowerCase() == 1 ? (
-          <video
-            playsInline
-            loop
-            muted
-            controls
-            src={post.featuredImage.url}
-            alt={post.title}
-            className='object-cover w-full rounded-t-lg md:h-auto'
-          />
-        ) : (
-          <img className='img-box' src={post.featuredImage.url} />
-        )} */}
-
-        {/* slider start */}
 
         <div className='navigation-wrapper'>
           <div ref={sliderRef} className='keen-slider'>
             {post.featuredImg.length === 0 && !post.featuredVideo && (
               <div className='keen-slider__slide'>
-                <img className='img-box' src={'/vercel.svg'} />
+                <img className='img-box' src={post.featuredImage.url} />
               </div>
             )}
 
@@ -144,7 +119,7 @@ const PostCard = ({ post, category }) => {
             </>
           )}
         </div>
-        {loaded && instanceRef.current && (
+        {loaded && instanceRef.current && post.featuredImg.length > 1 && (
         <div className="dots">
           {[
             ...Array(instanceRef.current.track.details.slides.length).keys(),
@@ -167,20 +142,7 @@ const PostCard = ({ post, category }) => {
         <motion.h1 className='post-title'>{post.title}</motion.h1>
         <motion.h1 className='post-client'>{post.excerpt}</motion.h1>
 
-        <div className='categories-box'>
-          {post.categories
-            .filter((category) => category.name !== 'all')
-            .map((category) => (
-              <Link
-                key={category.slug}
-                href={`/category/${category.slug}`}
-                onClick={() => setActive(category)}
-                className={`categories-cards ${active == category && 'active'}`}
-              >
-                {category.name} <span>&#160;|&#160;</span>
-              </Link>
-            ))}
-        </div>
+       
 
         <motion.div
           onClick={handleMore}
@@ -188,8 +150,24 @@ const PostCard = ({ post, category }) => {
         >
           {isOpen && (
             <motion.p className='p-text'>
+               <div className='categories-box'>
+          {post.categories
+            .filter((category) => category.name !== 'all')
+            .map((category) => (
+              <Link
+                key={category.slug}
+                href={`/category/${category.slug}`}
+                onClick={() => setActive(category)}
+                className={`categories ${active == category && 'active'}`}
+                id='cat-cards'
+              >
+                {category.name}
+              </Link>
+            ))}
+        </div>
+        
               {post.content.raw && <RichText content={post.content.raw} />}
-              <br />
+            
 
               {post.process.raw && <RichText content={post.process.raw} />}
 
@@ -210,6 +188,8 @@ const PostCard = ({ post, category }) => {
           </motion.button>
         </motion.div>
       </div>
+
+     
     </div>
   );
 };
