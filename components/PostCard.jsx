@@ -6,6 +6,7 @@ import { getCategories } from '../services';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
+import {BsPlayFill} from 'react-icons/bs';
 
 function Arrow(props) {
   const disabeld = props.disabled ? ' arrow--disabled' : '';
@@ -30,11 +31,12 @@ function Arrow(props) {
   );
 }
 
-const PostCard = ({ post, category }) => {
+const PostCard = ({ post, category, src }) => {
   const [categories, setCategories] = useState([]);
   const [active, setActive] = useState(null);
   const [isActive, setIsActive] = useState(false);
-
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
@@ -49,8 +51,6 @@ const PostCard = ({ post, category }) => {
 
   useEffect(() => {
     getCategories().then((newCategories) => setCategories(newCategories));
-
-    console.log(post);
   }, []);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -59,6 +59,14 @@ const PostCard = ({ post, category }) => {
     setIsOpen(!isOpen);
   };
 
+const playOrPause = () => {
+  if(videoRef.current.paused){videoRef.current.play();}
+ else {videoRef.current.pause()}
+};
+
+const onPlay = () => setIsPlaying(true);
+
+const onPause = () => setIsPlaying(false);
 
   return (
     <div className='wrapper'>
@@ -85,17 +93,21 @@ const PostCard = ({ post, category }) => {
 
             {post.featuredVideo && (
               <div className='keen-slider__slide'>
+                <div className="video-wrapper">
                 <video
-                  playsInline
-                  loop
-                  muted
-                  controls
+                 onPlay={onPlay}
+                 onPause={onPause}
+                 ref={videoRef}
                   poster={post.featuredImage.url}
                   src={post.featuredVideo.url}
                   alt={post.title}
-                  className='img-box'
+                  className='video-box'
                 />
-              </div>
+                <div className="controls" onClick={playOrPause}>
+                {!isPlaying &&(<BsPlayFill size={100} className='video-control' />)
+                }
+                </div>
+              </div></div>
             )}
           </div>
           {loaded && instanceRef.current && (

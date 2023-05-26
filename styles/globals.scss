@@ -408,6 +408,36 @@ margin: 1%;
   }}
 
 
+  .video-wrapper{
+width:100%;
+position: relative;
+ }
+
+.controls{
+position: absolute;
+top:0;
+bottom:0;
+left:0;
+right: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer; 
+
+
+}
+ 
+.video-control {
+color: white;
+cursor: pointer;
+}
+
+.video-box{
+    display: block;
+  }
+
+
+
 .post-title{
 font-size: 22px;
 // width: 66%;
