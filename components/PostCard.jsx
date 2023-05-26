@@ -90,9 +90,10 @@ const PostCard = ({ post, category }) => {
                   loop
                   muted
                   controls
+                  poster={post.featuredImage.url}
                   src={post.featuredVideo.url}
                   alt={post.title}
-                  className='object-cover w-full rounded-t-lg md:h-auto'
+                  className='img-box'
                 />
               </div>
             )}
