@@ -35,8 +35,8 @@ const PostCard = ({ post, category, src }) => {
   const [categories, setCategories] = useState([]);
   const [active, setActive] = useState(null);
   const [isActive, setIsActive] = useState(false);
-  const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false)
+  // const videoRef = useRef(null);
+  // const [isPlaying, setIsPlaying] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
@@ -59,14 +59,14 @@ const PostCard = ({ post, category, src }) => {
     setIsOpen(!isOpen);
   };
 
-const playOrPause = () => {
-  if(videoRef.current.paused){videoRef.current.play();}
- else {videoRef.current.pause()}
-};
+// const playOrPause = () => {
+//   if(videoRef.current.paused){videoRef.current.play();}
+//  else {videoRef.current.pause()}
+// };
 
-const onPlay = () => setIsPlaying(true);
+// const onPlay = () => setIsPlaying(true);
 
-const onPause = () => setIsPlaying(false);
+// const onPause = () => setIsPlaying(false);
 
   return (
     <div className='wrapper'>
@@ -95,22 +95,21 @@ const onPause = () => setIsPlaying(false);
               <div className='keen-slider__slide'>
                 <div className="video-wrapper">
                 <video
-                 onPlay={onPlay}
-                 onPause={onPause}
-                 ref={videoRef}
+  
+                  controls
                   poster={post.featuredImage.url}
                   src={post.featuredVideo.url}
                   alt={post.title}
                   className='video-box'
                 />
-                <div className="controls" onClick={playOrPause}>
+                {/* <div className="controls" onClick={playOrPause}>
                 {!isPlaying &&(<BsPlayFill size={100} className='video-control' />)
                 }
-                </div>
+                </div> */}
               </div></div>
             )}
           </div>
-          {loaded && instanceRef.current && (
+          {loaded && instanceRef.current && post.featuredImg.length > 1 && (
             <>
               <Arrow
                 left
@@ -197,7 +196,7 @@ const onPause = () => setIsPlaying(false);
           )}
 
           <motion.button className='more-button'>
-            {isActive ? <div>less -</div> : <div>more +</div>}
+            {isActive ? <div>less</div> : <div>more</div>}
           </motion.button>
         </motion.div>
       </div>

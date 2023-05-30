@@ -8,7 +8,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap');
 
 
 
@@ -20,14 +20,14 @@
 
 .arrow {
 
-  width: 10%;
-  height: 10%;
+  width: 20%;
+  height: 100%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   fill: #fff;
-  cursor: pointer;
+
   opacity:0;
   &:hover{
     opacity: 1;
@@ -37,11 +37,13 @@
 
 .arrow--left {
   left: 5px;
+  cursor: w-resize;
 }
 
 .arrow--right {
   left: auto;
   right: 5px;
+  cursor: e-resize;
 }
 
 .arrow--disabled {
@@ -61,7 +63,7 @@
 
 .dot {
   border: none;
-  width: 30px;
+  width: 6px;
   height: 6px;
   background: rgb(100, 100, 100);
  
@@ -94,12 +96,15 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "ubuntu mono", serif;
-font-weight: 400;
-font-style: normal;
+
+  font-family: 'Roboto Mono', monospace;
+
+//   font-family: "ubuntu mono", serif;
+// font-weight: 400;
+// font-style: normal;
   // font-family: neue-haas-grotesk-text, sans-serif;
 
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 letter-spacing: normal;
   overflow-x: hidden;
@@ -224,7 +229,7 @@ flex-direction: column;
 .p-bio {
   font-size: 18px;
   padding: 2%;
-  font-family: neue-haas-grotesk-text, sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-weight: 300;
   font-style: normal;
 letter-spacing: normal;
@@ -367,6 +372,7 @@ margin: 1%;
   width: 66% ;
 }}
 
+
 @media only screen and (max-width: 629px) {
   /* for widths less than or equal to 629 pixels */
   .content{
@@ -443,7 +449,7 @@ font-size: 22px;
 // width: 66%;
 
 margin-top: 4%;
-font-family: neue-haas-grotesk-text, sans-serif;
+font-family: 'Roboto Mono', monospace;
 // font-family: 'Plus Jakarta Sans', sans-serif;
 font-weight: 300;
 letter-spacing: normal;
@@ -485,7 +491,7 @@ font-size: 16px;
   margin-bottom: 0;
   margin-top: 1%;
   margin-right: 4%;
-  font-family: neue-haas-grotesk-text, sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-weight: 300;
   font-style: normal;
 letter-spacing: normal;
