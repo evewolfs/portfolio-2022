@@ -15,7 +15,6 @@ export const getPosts = async () => {
             excerpt
             websiteLink
             orderNumber
-            videoLink
             featuredImg {
               url
             }
@@ -76,14 +75,12 @@ export const getCategoryPost = async (slug) => {
             excerpt
             websiteLink
             orderNumber
-            videoLink
             featuredImg {
               url
             }
             featuredImage {
               url
             }
-
             categories {
               name
               slug
