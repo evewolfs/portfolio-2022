@@ -1,23 +1,23 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { useState, useRef, useEffect } from 'react';
-import { getCategories } from '../services';
-import { RichText } from '@graphcms/rich-text-react-renderer';
-import { useKeenSlider } from 'keen-slider/react';
-import 'keen-slider/keen-slider.min.css';
-import {BsPlayFill} from 'react-icons/bs';
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
+import { getCategories } from "../services";
+import { RichText } from "@graphcms/rich-text-react-renderer";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import { BsPlayFill } from "react-icons/bs";
 
 function Arrow(props) {
-  const disabeld = props.disabled ? ' arrow--disabled' : '';
+  const disabeld = props.disabled ? " arrow--disabled" : "";
   return (
     <svg
       onClick={props.onClick}
       className={`arrow ${
-        props.left ? 'arrow--left' : 'arrow--right'
+        props.left ? "arrow--left" : "arrow--right"
       } ${disabeld}`}
-      xmlns='http://www.w3.org/2000/svg'
-      viewBox='0 0 24 24'
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
     >
       {props.left && (
         // <path d='M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z' />
@@ -59,54 +59,51 @@ const PostCard = ({ post, category, src }) => {
     setIsOpen(!isOpen);
   };
 
-// const playOrPause = () => {
-//   if(videoRef.current.paused){videoRef.current.play();}
-//  else {videoRef.current.pause()}
-// };
+  // const playOrPause = () => {
+  //   if(videoRef.current.paused){videoRef.current.play();}
+  //  else {videoRef.current.pause()}
+  // };
 
-// const onPlay = () => setIsPlaying(true);
+  // const onPlay = () => setIsPlaying(true);
 
-// const onPause = () => setIsPlaying(false);
+  // const onPause = () => setIsPlaying(false);
 
   return (
-    <div className='wrapper'>
-    
-
-      <div class='box content'>
-
-        <div className='navigation-wrapper'>
-          <div ref={sliderRef} className='keen-slider'>
+    <div className="wrapper">
+      <div class="box content">
+        <div className="navigation-wrapper">
+          <div ref={sliderRef} className="keen-slider">
             {post.featuredImg.length === 0 && !post.featuredVideo && (
-              <div className='keen-slider__slide'>
-                <img className='img-box' src={post.featuredImage.url} />
+              <div className="keen-slider__slide">
+                <img className="img-box" src={post.featuredImage.url} />
               </div>
             )}
 
             {post.featuredImg.length > 0 &&
               post.featuredImg.map((item, i) => {
                 return (
-                  <div key={i} className='keen-slider__slide'>
-                    <img className='img-box' src={item.url} />
+                  <div key={i} className="keen-slider__slide">
+                    <img className="img-box" src={item.url} />
                   </div>
                 );
               })}
 
             {post.featuredVideo && (
-              <div className='keen-slider__slide'>
+              <div className="keen-slider__slide">
                 <div className="video-wrapper">
-                <video
-  
-                  controls
-                  poster={post.featuredImage.url}
-                  src={post.featuredVideo.url}
-                  alt={post.title}
-                  className='video-box'
-                />
-                {/* <div className="controls" onClick={playOrPause}>
+                  <video
+                    controls
+                    poster={post.featuredImage.url}
+                    src={post.featuredVideo.url}
+                    alt={post.title}
+                    className="video-box"
+                  />
+                  {/* <div className="controls" onClick={playOrPause}>
                 {!isPlaying &&(<BsPlayFill size={100} className='video-control' />)
                 }
                 </div> */}
-              </div></div>
+                </div>
+              </div>
             )}
           </div>
           {loaded && instanceRef.current && post.featuredImg.length > 1 && (
@@ -132,61 +129,58 @@ const PostCard = ({ post, category, src }) => {
           )}
         </div>
         {loaded && instanceRef.current && post.featuredImg.length > 1 && (
-        <div className="dots">
-          {[
-            ...Array(instanceRef.current.track.details.slides.length).keys(),
-          ].map((idx) => {
-            return (
-              <button
-                key={idx}
-                onClick={() => {
-                  instanceRef.current?.moveToIdx(idx)
-                }}
-                className={"dot" + (currentSlide === idx ? " active" : "")}
-              ></button>
-            )
-          })}
-        </div>
-      )}
+          <div className="dots">
+            {[
+              ...Array(instanceRef.current.track.details.slides.length).keys(),
+            ].map((idx) => {
+              return (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    instanceRef.current?.moveToIdx(idx);
+                  }}
+                  className={"dot" + (currentSlide === idx ? " active" : "")}
+                ></button>
+              );
+            })}
+          </div>
+        )}
       </div>
 
-      <div class='box sidebar'>
-        <motion.h1 className='post-title'>{post.title}</motion.h1>
-        <motion.h1 className='post-client'>{post.excerpt}</motion.h1>
-
-       
+      <div class="box sidebar">
+        <motion.h1 className="post-title">{post.title}</motion.h1>
+        <motion.h1 className="post-client">{post.excerpt}</motion.h1>
 
         <motion.div
           onClick={handleMore}
-          transition={{ layout: { duration: 1, type: 'spring' } }}
+          transition={{ layout: { duration: 1, type: "spring" } }}
         >
           {isOpen && (
-            <motion.p className='p-text'>
-               <div className='categories-box'>
-          {post.categories
-            .filter((category) => category.name !== 'all')
-            .map((category) => (
-              <Link
-                key={category.slug}
-                href={`/category/${category.slug}`}
-                onClick={() => setActive(category)}
-                className={`categories ${active == category && 'active'}`}
-                id='cat-cards'
-              >
-                {category.name}
-              </Link>
-            ))}
-        </div>
-        
+            <motion.p className="p-text">
+              <div className="categories-box">
+                {post.categories
+                  .filter((category) => category.name !== "all")
+                  .map((category) => (
+                    <Link
+                      key={category.slug}
+                      href={`/category/${category.slug}`}
+                      onClick={() => setActive(category)}
+                      className={`categories ${active == category && "active"}`}
+                      id="cat-cards"
+                    >
+                      {category.name}
+                    </Link>
+                  ))}
+              </div>
+
               {post.content.raw && <RichText content={post.content.raw} />}
-            
 
               {post.process.raw && <RichText content={post.process.raw} />}
 
               <>
                 {post.websiteLink && (
-                  <motion.div className='web-link'>
-                    <a href={post.websiteLink} target='_blank' rel='noreferrer'>
+                  <motion.div className="web-link">
+                    <a href={post.websiteLink} target="_blank" rel="noreferrer">
                       {post.websiteLink}
                     </a>
                   </motion.div>
@@ -195,13 +189,11 @@ const PostCard = ({ post, category, src }) => {
             </motion.p>
           )}
 
-          <motion.button className='more-button'>
+          <motion.button className="more-button">
             {isActive ? <div>less</div> : <div>more</div>}
           </motion.button>
         </motion.div>
       </div>
-
-     
     </div>
   );
 };

@@ -1,12 +1,12 @@
 import { request, gql } from "graphql-request";
-import { RichText } from '@graphcms/rich-text-react-renderer';
+import { RichText } from "@graphcms/rich-text-react-renderer";
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 
 export const getPosts = async () => {
   const query = gql`
     query MyQuery {
-      postsConnection (first: 14 orderBy: orderNumber_ASC) {
+      postsConnection(first: 14, orderBy: orderNumber_ASC) {
         edges {
           node {
             createdAt
@@ -25,7 +25,7 @@ export const getPosts = async () => {
             featuredVideo {
               url
             }
-       
+
             categories {
               name
               slug
@@ -40,7 +40,6 @@ export const getPosts = async () => {
         }
       }
     }
-    
   `;
   const result = await request(graphqlAPI, query);
   return result.postsConnection.edges;
@@ -48,8 +47,8 @@ export const getPosts = async () => {
 
 export const getCategories = async () => {
   const query = gql`
-    query GetCategories  {
-      categories(orderBy: orderCategory_ASC) { 
+    query GetCategories {
+      categories(orderBy: orderCategory_ASC) {
         name
         slug
       }
@@ -63,7 +62,11 @@ export const getCategories = async () => {
 export const getCategoryPost = async (slug) => {
   const query = gql`
     query GetCategoryPost($slug: String!) {
-      postsConnection(where: {categories_some: {slug: $slug}} first: 14 orderBy: orderNumber_ASC) {
+      postsConnection(
+        where: { categories_some: { slug: $slug } }
+        first: 14
+        orderBy: orderNumber_ASC
+      ) {
         edges {
           cursor
           node {
@@ -80,7 +83,7 @@ export const getCategoryPost = async (slug) => {
             featuredImage {
               url
             }
-    
+
             categories {
               name
               slug

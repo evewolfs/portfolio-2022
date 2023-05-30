@@ -1,17 +1,13 @@
-import React  from "react";
+import React from "react";
 import ButtonContact from "./ButtonContact";
 
-
 const Header = (props) => {
-
   return (
     <div className="header-box">
-    
-        <BioButton/>
-        {/* <TextSlider slides={SliderData} /> */}
-        <ButtonContact />
-      </div>
- 
+      <BioButton />
+      {/* <TextSlider slides={SliderData} /> */}
+      <ButtonContact />
+    </div>
   );
 };
 

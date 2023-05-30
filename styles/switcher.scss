@@ -1,7 +1,7 @@
 @import url('//fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap');
 
 
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -12,37 +12,40 @@ html {
 body {
     color: #222;
     height: 100vh;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+
 }
 
 
 
 .theme-options {
-  
- color:#222;
-   display: inline-flex;
-   padding: 0.5%;
-   margin-left: 1%;
-   cursor: pointer;
-  width:fit-content;
-  height: 40px;
-   border-radius: 40px;
-   background: var(--clearbg); 
 
-   box-shadow: var(--shadow);
-   vertical-align: middle;
-   align-items: center;
-   justify-content: center;
-   
+    color: #222;
+    display: inline-flex;
+    padding: 0.5%;
+    margin-left: 1%;
+    cursor: pointer;
+    width: fit-content;
+    height: 40px;
+    border-radius: 40px;
+    background: var(--clearbg);
 
-   header-box {
-    div{
-        display: flex;
-        vertical-align: middle;
-     
-            }
-}
+    box-shadow: var(--shadow);
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
 
 
+    header-box {
+        div {
+            display: flex;
+            vertical-align: middle;
+
+        }
+    }
 
 
 
@@ -50,220 +53,308 @@ body {
 
 
 
-  
-  
-   
+
+
+
+
+
 
     #theme-sun {
         background-color: transparent;
         margin: 4px 20px 4px 20px;
-        &:hover{    border-radius: 20px;
+
+        &:hover {
+            border-radius: 20px;
             transform: scale(1.8);
             padding: 4px;
-            background:var(--text);
-    }
+            background: var(--text);
+        }
+
         &.active {
             border-radius: 20px;
             transform: scale(1.8);
             padding: 4px;
-            background:var(--text);
-            
-    }
+            background: var(--text);
+
         }
-    
+    }
+
     #theme-moon {
         background-color: transparent;
-        margin: 4px 20px 4px 20px;     
-        &:hover{    border-radius: 20px;
-            transform: scale(2);
-            padding: 4px;
-              background:var(--text);}
-        &.active {
+        margin: 4px 20px 4px 20px;
+
+        &:hover {
             border-radius: 20px;
             transform: scale(2);
             padding: 4px;
-              background:var(--text);
-            
-            }
+            background: var(--text);
         }
-    
-    #theme-cloud {
-        background-color: transparent;
-        margin: 4px 20px 4px 20px;  
-        &:hover{    border-radius: 20px;
-            transform: scale(1.7);
-            padding: 4px;
-            background:var(--text);
-        }
+
         &.active {
             border-radius: 20px;
-            transform: scale(1.7);
+            transform: scale(2);
             padding: 4px;
-              background-color: transparent;
-              background:var(--text);
-          
-            }
-              
-        }
-   
-    #theme-rainbow {
-        background-color: transparent;
-        margin: 4px 20px 4px 20px;        
-        &:hover{    border-radius: 20px;
-            transform: scale(1.6);
-            padding: 4px;
-            background:var(--text);
-        }
-        &.active {
-            border-radius: 20px;
-            transform: scale(1.6);
-            padding: 4px;
-              background:var(--text);
-            
-            
-            }
+            background: var(--text);
+
         }
     }
+
+    #theme-cloud {
+        background-color: transparent;
+        margin: 4px 20px 4px 20px;
+
+        &:hover {
+            border-radius: 20px;
+            transform: scale(1.7);
+            padding: 4px;
+            background: var(--text);
+        }
+
+        &.active {
+            border-radius: 20px;
+            transform: scale(1.7);
+            padding: 4px;
+            background-color: transparent;
+            background: var(--text);
+
+        }
+
+    }
+
+    #theme-rainbow {
+        background-color: transparent;
+        margin: 4px 20px 4px 20px;
+
+        &:hover {
+            border-radius: 20px;
+            transform: scale(1.6);
+            padding: 4px;
+            background: var(--text);
+        }
+
+        &.active {
+            border-radius: 20px;
+            transform: scale(1.6);
+            padding: 4px;
+            background: var(--text);
+
+
+        }
+    }
+}
 
 
 .Main.theme-moon {
     background-color: #2b2b2b;
-    .content-box{
-       
-        h1, h2, h3, h4, h5, p, .categories-cards {
+
+    .content-box {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        p,
+        .categories-cards {
             color: rgb(245, 245, 245);
         }
-        .more-button, .web-link {
+
+        .more-button,
+        .web-link {
             border: 1px solid rgb(245, 245, 245);
             color: #fff;
 
         }
-    
+
         .categories {
-            
 
-            &.active
-            {background:rgba(0, 0, 0, 0.8);
-            color: #fff;}
-           
-            a
-           { box-shadow: var(--shadow);
-            background: var(--clearbg); 
 
-            &:hover{background:rgba(0, 0, 0, 0.8);
+            &.active {
+                background: rgba(0, 0, 0, 0.8);
                 color: #fff;
             }
+
+            a {
+                box-shadow: var(--shadow);
+                background: var(--clearbg);
+
+                &:hover {
+                    background: rgba(0, 0, 0, 0.8);
+                    color: #fff;
+                }
+            }
         }
-        }
-      
+
     }
 }
 
 .Main.theme-sun {
-    .content-box{
-        background-color:#f6f6f6 ;
-        h3, h5,p {
+    .content-box {
+        background-color: #f6f6f6;
+
+        h3,
+        h5,
+        p {
             color: rgb(45, 45, 45);
         }
-     
+
     }
+
     .categories {
-        &.active
-        {background:rgba(222, 222, 222, 0.8);
-       }
-       
-        a
-       { box-shadow: var(--shadow);
-        background:  rgba(255, 255, 255, 0.3);
-        &:hover{background:rgba(222, 222, 222, 0.8);
-           
+        &.active {
+            background: rgba(222, 222, 222, 0.8);
+        }
+
+        a {
+            box-shadow: var(--shadow);
+            background: rgba(255, 255, 255, 0.3);
+
+            &:hover {
+                background: rgba(222, 222, 222, 0.8);
+
+            }
         }
     }
-    }
-   
-  
+
+
 }
 
 .Main.theme-cloud {
     background-color: #c1c5d3;
-   
-    .content-box{
 
-        .bio-button, .contact-box, .theme-options{
+    .content-box {
+
+        .bio-button,
+        .contact-box,
+        .theme-options {
             background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 0 10px 8px rgb(255, 255, 255, 0.7);
         }
 
         .categories {
-            &.active
-            {background:rgba(222, 222, 222, 0.916);
-                box-shadow: 0 0 12px 12px rgb(222, 222, 222, 0.7);
-
-        }
-           
-            a
-           { 
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 0 12px 12px rgb(255, 255, 255, 0.7);
-
-            &:hover{background:rgba(222, 222, 222, 0.916);
+            &.active {
+                background: rgba(222, 222, 222, 0.916);
                 box-shadow: 0 0 12px 12px rgb(222, 222, 222, 0.7);
 
             }
+
+            a {
+                background-color: rgba(255, 255, 255, 0.9);
+                box-shadow: 0 0 12px 12px rgb(255, 255, 255, 0.7);
+
+                &:hover {
+                    background: rgba(222, 222, 222, 0.916);
+                    box-shadow: 0 0 12px 12px rgb(222, 222, 222, 0.7);
+
+                }
+            }
         }
-        }
-       
+
     }
-   
+
 }
 
 .Main.theme-rainbow {
     background-color: #9399a9;
- 
 
-    .content-box{
-        h3, h5 {
+
+    .content-box {
+
+        h3,
+        h5 {
             color: rgb(67, 67, 67);
         }
+
         p {
             color: rgb(57, 57, 57);
         }
+
         .categories {
-      
-            a{background-color: rgba(255, 255, 255, 0);
-                &:nth-child(1) {  opacity: 0.6; border: 0px solid #CC99FF; background-color:#cc99ff; box-shadow:#CC99FF 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; }
-                &:nth-child(2) {  opacity: 0.6; border: 0px solid #CC99FF; background-color:#cc99ff; box-shadow:#CC99FF 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; }
 
-                &:nth-child(3) { opacity: 0.6; border: 0px solid #A9D1F7; background-color:#A9D1F7; box-shadow:#A9D1F7 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;}
-                &:nth-child(4) { opacity: 0.6; border: 0px solid #B4F0A7; background-color:#B4F0A7; box-shadow:#B4F0A7 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;}
-                &:nth-child(5) { opacity: 0.6; border: 0px solid #FFFFBF; background-color:#FFFFBF; box-shadow:#FFFFBF 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;}
-                &:nth-child(6) { opacity: 0.6; border: 0px solid #FFDFBE; background-color:#FFDFBE; box-shadow:#FFDFBE 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; }
-                &:nth-child(7) { opacity: 0.6; border: 0px solid #FFB1B0; background-color:#FFB1B0; box-shadow:#FFB1B0 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;}
-                &.active
-                {filter: saturate(4);}
-                &:hover
-                {filter: saturate(4);}
+            a {
+                background-color: rgba(255, 255, 255, 0);
+
+                &:nth-child(1) {
+                    opacity: 0.6;
+                    border: 0px solid #CC99FF;
+                    background-color: #cc99ff;
+                    box-shadow: #CC99FF 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                }
+
+                &:nth-child(2) {
+                    opacity: 0.6;
+                    border: 0px solid #CC99FF;
+                    background-color: #cc99ff;
+                    box-shadow: #CC99FF 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                }
+
+                &:nth-child(3) {
+                    opacity: 0.6;
+                    border: 0px solid #A9D1F7;
+                    background-color: #A9D1F7;
+                    box-shadow: #A9D1F7 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                }
+
+                &:nth-child(4) {
+                    opacity: 0.6;
+                    border: 0px solid #B4F0A7;
+                    background-color: #B4F0A7;
+                    box-shadow: #B4F0A7 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                }
+
+                &:nth-child(5) {
+                    opacity: 0.6;
+                    border: 0px solid #FFFFBF;
+                    background-color: #FFFFBF;
+                    box-shadow: #FFFFBF 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                }
+
+                &:nth-child(6) {
+                    opacity: 0.6;
+                    border: 0px solid #FFDFBE;
+                    background-color: #FFDFBE;
+                    box-shadow: #FFDFBE 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                }
+
+                &:nth-child(7) {
+                    opacity: 0.6;
+                    border: 0px solid #FFB1B0;
+                    background-color: #FFB1B0;
+                    box-shadow: #FFB1B0 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                }
+
+                &.active {
+                    filter: saturate(4);
+                }
+
+                &:hover {
+                    filter: saturate(4);
+                }
             }
-       
+
         }
-   
-        
-        .theme-options{
+
+
+        .theme-options {
             background-color: rgba(255, 255, 255, 0.1);
-            box-shadow: none;  
+            box-shadow: none;
+        }
+
+
+
+        .bio-button,
+        .contact-box {
+
+            background-color: rgba(255, 255, 255, 0.05);
+            box-shadow: none;
+        }
     }
-
-
-
-.bio-button, .contact-box{
-
-    background-color: rgba(255, 255, 255, 0.05);
-    box-shadow: none;
 }
-    }}
 
-    
-    @media only screen and (max-width: 629px) {
-        .theme-options {   
-            margin-left: 3%;
-        margin-top: 3%;}}
+
+@media only screen and (max-width: 629px) {
+    .theme-options {
+        margin-left: 3%;
+        margin-top: 3%;
+    }
+}
