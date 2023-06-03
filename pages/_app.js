@@ -5,8 +5,10 @@ import "tailwindcss/tailwind.css";
 import "../styles/globals.scss";
 import "../styles/switcher.scss";
 
+
 function MyApp({ Component, pageProps }) {
   return (
+    
     <Layout>
       <Component {...pageProps} />
     </Layout>

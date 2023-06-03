@@ -4,12 +4,15 @@ import { PostCard } from "../components";
 import { getPosts } from "../services";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 
+
+
 export default function Home({ posts }) {
   return (
-    <div className="post-container">
+    <div className="post-container" >
       <Head>
         <title>ève wolfs</title>
         <link rel="icon" href="/favicon.ico" />
+
       </Head>
 
       <div className="content-box">
