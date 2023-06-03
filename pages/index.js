@@ -12,7 +12,7 @@ export default function Home({ posts }) {
       <Head>
         <title>ève wolfs</title>
         <link rel="icon" href="/favicon.ico" />
-
+        <link rel="stylesheet" href="https://use.typekit.net/nmy3nwt.css"/>
       </Head>
 
       <div className="content-box">
