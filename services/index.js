@@ -81,6 +81,9 @@ export const getCategoryPost = async (slug) => {
             featuredImage {
               url
             }
+            featuredVideo {
+              url
+            }
             categories {
               name
               slug

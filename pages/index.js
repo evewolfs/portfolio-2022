@@ -3,7 +3,7 @@ import Head from "next/head";
 import { PostCard } from "../components";
 import { getPosts } from "../services";
 import { RichText } from "@graphcms/rich-text-react-renderer";
-
+import { useState, useRef, useEffect } from "react";
 
 
 export default function Home({ posts }) {
@@ -15,7 +15,7 @@ export default function Home({ posts }) {
         <link rel="stylesheet" href="https://use.typekit.net/nmy3nwt.css"/>
       </Head>
 
-      <div className="content-box">
+      <div className="wrapper">
         {" "}
         {posts.map((post) => (
           <PostCard post={post.node} key={post.title} />

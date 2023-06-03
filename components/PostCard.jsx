@@ -6,7 +6,7 @@ import { getCategories } from "../services";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { BsPlayFill } from "react-icons/bs";
+import { SlControlPlay } from "react-icons/sl";
 
 function Arrow(props) {
   const disabeld = props.disabled ? " arrow--disabled" : "";
@@ -25,7 +25,10 @@ function Arrow(props) {
       )}
       {!props.left && (
         // <path d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z' />
-        <div className="small-chevron">&#8594;</div>
+        <path d="M492.5,293.3c-0.2,0-0.3-0.1-0.4-0.2c-0.1-0.2-0.1-0.5,0.2-0.7l18.7-10.8c1.1-0.7,1.8-1.8,1.8-3.1c0-1.3-0.7-2.5-1.8-3.1
+        l-18.7-10.8c-0.2-0.1-0.3-0.4-0.2-0.7c0.1-0.2,0.4-0.3,0.7-0.2l18.7,10.8c1.5,0.8,2.3,2.3,2.3,4c0,1.7-0.9,3.2-2.3,4l-18.7,10.8
+        C492.7,293.3,492.6,293.3,492.5,293.3z"/>
+        // <div className="small-chevron">&#8594;</div>
       )}
     </svg>
   );
@@ -35,8 +38,8 @@ const PostCard = ({ post, category, src }) => {
   const [categories, setCategories] = useState([]);
   const [active, setActive] = useState(null);
   const [isActive, setIsActive] = useState(false);
-  // const videoRef = useRef(null);
-  // const [isPlaying, setIsPlaying] = useState(false)
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
@@ -59,14 +62,15 @@ const PostCard = ({ post, category, src }) => {
     setIsOpen(!isOpen);
   };
 
-  // const playOrPause = () => {
-  //   if(videoRef.current.paused){videoRef.current.play();}
-  //  else {videoRef.current.pause()}
-  // };
+  const playOrPause = () => {
+    if(videoRef.current.paused){videoRef.current.play();}
+   else {videoRef.current.pause()}
+  };
 
-  // const onPlay = () => setIsPlaying(true);
+  const onPlay = () => setIsPlaying(true);
 
-  // const onPause = () => setIsPlaying(false);
+const onPause = () => setIsPlaying(false);
+
 
   return (
     <div className="wrapper">
@@ -86,22 +90,26 @@ const PostCard = ({ post, category, src }) => {
                     <img className="img-box" src={item.url} />
                   </div>
                 );
+
+                
               })}
 
             {post.featuredVideo && (
               <div className="keen-slider__slide">
                 <div className="video-wrapper">
                   <video
-                    controls
-                    // poster={post.featuredImage.url}
+                       onPlay={onPlay}
+                       onPause={onPause}
+                       ref={videoRef}
+                    poster={post.featuredImage.url}
                     src={post.featuredVideo.url}
                     alt={post.title}
                     className="video-box"
                   />
-                  {/* <div className="controls" onClick={playOrPause}>
-                {!isPlaying &&(<BsPlayFill size={100} className='video-control' />)
+                  <div className="controls" onClick={playOrPause}>
+                {!isPlaying &&(<SlControlPlay size={50} className='video-control' />)
                 }
-                </div> */}
+                </div>
                 </div>
               </div>
             )}

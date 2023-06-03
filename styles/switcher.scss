@@ -162,11 +162,16 @@ body {
         }
 
         .more-button,
-        .web-link {
+        .web-link, .dot, #cat-cards {
             border: 1px solid rgb(245, 245, 245);
             color: #fff;
 
         }
+
+        .dot.active {
+            background: rgb(245, 245, 245);
+          }
+          
 
         .categories {
 
@@ -326,6 +331,72 @@ body {
                 }
 
                 &.active {
+                    filter: saturate(3);
+                }
+
+                &:hover {
+                    filter: saturate(3);
+                }
+            }
+
+        }
+
+        @media only screen and (max-width: 629px) {
+        .categories {
+
+            a {
+                background-color: rgba(255, 255, 255, 0);
+
+                &:nth-child(1) {
+                    opacity: 0.8;
+                    border: 0px solid #CC99FF;
+                    background-color: #cc99ff;
+                    box-shadow: #CC99FF 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                }
+
+                &:nth-child(2) {
+                    opacity: 0.8;
+                    border: 0px solid #CC99FF;
+                    background-color: #cc99ff;
+                    box-shadow: #CC99FF 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                }
+
+                &:nth-child(3) {
+                    opacity: 0.8;
+                    border: 0px solid #A9D1F7;
+                    background-color: #A9D1F7;
+                    box-shadow: #A9D1F7 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                }
+
+                &:nth-child(4) {
+                    opacity: 0.8;
+                    border: 0px solid #B4F0A7;
+                    background-color: #B4F0A7;
+                    box-shadow: #B4F0A7 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                }
+
+                &:nth-child(5) {
+                    opacity: 0.8;
+                    border: 0px solid #FFFFBF;
+                    background-color: #FFFFBF;
+                    box-shadow: #FFFFBF 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                }
+
+                &:nth-child(6) {
+                    opacity: 0.8;
+                    border: 0px solid #FFDFBE;
+                    background-color: #FFDFBE;
+                    box-shadow: #FFDFBE 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                }
+
+                &:nth-child(7) {
+                    opacity: 0.8;
+                    border: 0px solid #FFB1B0;
+                    background-color: #FFB1B0;
+                    box-shadow: #FFB1B0 0px -30px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                }
+
+                &.active {
                     filter: saturate(4);
                 }
 
@@ -334,8 +405,7 @@ body {
                 }
             }
 
-        }
-
+        }}
 
         .theme-options {
             background-color: rgba(255, 255, 255, 0.1);
