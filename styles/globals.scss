@@ -106,6 +106,7 @@ a {
 
 
 .bio-button {
+  
   margin: 1%;
   display: flex;
   cursor: pointer;
@@ -119,6 +120,7 @@ a {
   vertical-align: middle;
   letter-spacing: 0;
   flex-direction: column;
+
 }
 
 @media only screen and (max-width: 629px) {
@@ -167,8 +169,12 @@ a {
   a {
     box-shadow: none;
   }
+  &:hover{
+    opacity: 0.5;
+  }
 
 }
+
 
 @media only screen and (max-width: 629px) {
   .contact-box {
@@ -187,6 +193,7 @@ a {
   margin-top: 1%;
   font-style: normal;
   letter-spacing: normal;
+  
 
 
 
@@ -195,7 +202,9 @@ a {
     white-space: nowrap;
     margin-right: 1%;
     background: var(--clearbg);
-
+    &:hover{
+      opacity: 0.5;
+    }
 
   }
 }
@@ -225,13 +234,7 @@ a {
 
   .categories-container {
     margin-top: 4%;
-
   }
-
-  #cat-link {
-    padding: 2% 8%;
-  }
-
 }
 
 #cat-link {
@@ -246,7 +249,7 @@ a {
 
 @media only screen and (max-width: 629px) {
   #cat-link {
-
+ padding: 2% 8%;
     a {
       border-radius: 30px;
     }
@@ -408,13 +411,13 @@ margin-bottom: 4%;
 
 .controls {
   position: absolute;
-  top: 0;
+  top:0;
   bottom: 0;
   left: 0;
   right: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   cursor: pointer;
 
 
@@ -422,17 +425,26 @@ margin-bottom: 4%;
 }
 
 .video-control {
-
+  svg{
+    height: 16px;
+    width: 16px;
+  }
 border-radius: 100px;
 // padding: 16px;
 // padding-left: 21px;
 // padding-top: 17px;
-width: 60px;
-height: 60px;
+padding: 1%;
+margin: 2%;
+overflow: visible;
+width: 40px;
+height: 40px;
   cursor: pointer;
-color: rgba( 222, 222, 222, 0.6 );
+  box-shadow: var(--shadow);
+  background: rgba(255, 255, 255, 0.9);
+
+color: rgba(34, 34, 34, 0.707);
   &:hover{
-    opacity: 0.6;
+    opacity: 0.3;
   }
 }
 
@@ -612,18 +624,17 @@ color: rgba( 222, 222, 222, 0.6 );
 }
 
 .more-button {
-  font-size: 12px;
+  font-size: 14px;
   // box-shadow: var(--shadow);
   // background:  rgba(34, 34, 34, 0.25);
-
-  border: 1px solid var(--black);
+  // box-shadow: var(--shadow);
+  // background: var(--clearbg);
   padding: 1% 2%;
-  border-radius: 25px;
   width: fit-content;
   border-radius: 30px;
   margin-top: 2%;
-  // text-decoration: underline;
-  font-weight: 300;
+  text-decoration: underline;
+  opacity: 0.8;
   &:hover{
     opacity: 0.5;
   }
@@ -642,8 +653,8 @@ color: rgba( 222, 222, 222, 0.6 );
 .footer{
   font-size: 12px;
   text-align: center;
-  padding:2%;
-  margin-top: 1%;
+
+  margin: 0.5% 0;
   span{
     text-decoration: underline;
   }

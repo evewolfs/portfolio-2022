@@ -6,7 +6,7 @@ import { getCategories } from "../services";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { AiFillPlayCircle } from "react-icons/ai";
+import { AiOutlineEye } from "react-icons/ai";
 
 function Arrow(props) {
   const disabeld = props.disabled ? " arrow--disabled" : "";
@@ -52,8 +52,7 @@ const PostCard = ({ post, category, src }) => {
       setLoaded(true);
     },
   });
-  const[currentTime1, setCurrentTime1] = useState('00:00');
-  const[currentTime2, setCurrentTime2] = useState('00:00');
+
 
   useEffect(() => {
     getCategories().then((newCategories) => setCategories(newCategories));
@@ -87,11 +86,38 @@ const PostCard = ({ post, category, src }) => {
           <div ref={sliderRef} className="keen-slider">
             {post.featuredImg.length === 0 && !post.featuredVideo && (
               <div className="keen-slider__slide">
-                <img className="img-box" src={post.featuredImage.url} />
+                <img className="img-box" src={post.featuredImg.url} />
               </div>
             )}
 
-            {post.featuredImg.length > 0 &&
+{post.featuredVideo && (
+             
+             <div className="keen-slider__slide">
+               <div className="video-wrapper">
+                 <video
+               
+                      onPlay={onPlay}
+                      onPause={onPause}
+                      ref={videoRef}
+                   poster={post.featuredImage.url}
+                   src={post.featuredVideo.url}
+                   alt={post.title}
+                   className="video-box"
+                 />
+               
+
+         
+                 <div className="controls" onClick={playOrPause}>
+               {!isPlaying &&(<AiOutlineEye size={10} className='video-control' />)
+               }
+               </div>
+         
+
+               </div>
+             </div>
+           )}
+
+            {post.featuredImg.length !=0 &&
               post.featuredImg.map((item, i) => {
                 return (
                   <div key={i} className="keen-slider__slide">
@@ -102,31 +128,7 @@ const PostCard = ({ post, category, src }) => {
                 
               })}
 
-            {post.featuredVideo && (
-             
-              <div className="keen-slider__slide">
-                <div className="video-wrapper">
-                  <video
-                       onPlay={onPlay}
-                       onPause={onPause}
-                       ref={videoRef}
-                    poster={post.featuredImage.url}
-                    src={post.featuredVideo.url}
-                    alt={post.title}
-                    className="video-box"
-                  />
-                
-
-          
-                  <div className="controls" onClick={playOrPause}>
-                {!isPlaying &&(<AiFillPlayCircle size={50} className='video-control' />)
-                }
-                </div>
-          
-
-                </div>
-              </div>
-            )}
+           
           </div>
           {loaded && instanceRef.current && post.featuredImg.length > 1 && (
             <>
@@ -172,14 +174,7 @@ const PostCard = ({ post, category, src }) => {
       <div class="box sidebar">
         <motion.h1 className="post-title">{post.title}</motion.h1>
         <motion.h1 className="post-client">{post.excerpt}</motion.h1>
-
-        <motion.div
-          onClick={handleMore}
-          transition={{ layout: { duration: 1, type: "spring" } }}
-        >
-          {isOpen && (
-            <motion.p className="p-text">
-              <div className="categories-box">
+        <div className="categories-box">
                 {post.categories
                   .filter((category) => category.name !== "all")
                   .map((category) => (
@@ -194,6 +189,13 @@ const PostCard = ({ post, category, src }) => {
                     </Link>
                   ))}
               </div>
+        <motion.div
+          onClick={handleMore}
+          transition={{ layout: { duration: 1, type: "spring" } }}
+        >
+          {isOpen && (
+            <motion.p className="p-text">
+          
 
               {post.content.raw && <RichText content={post.content.raw} />}
 

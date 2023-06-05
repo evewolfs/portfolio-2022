@@ -92,7 +92,7 @@ From scratch to the launch, I appreciate every step of the process, and take mos
           <Categories />
 
           {children}
-          <div className="footer">this website was developed with next.js & react.js - <a href="https://github.com/evewolfs/portfolio-2022" target="_blank" ><span>see on my github</span></a></div>
+          <div className="footer">Made with next.js and react.js - <a href="https://github.com/evewolfs/portfolio-2022" target="_blank" ><span>see on github</span></a></div>
         </motion.div>
       </div>
     </>
