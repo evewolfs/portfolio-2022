@@ -6,7 +6,7 @@ import { getCategories } from "../services";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { SlControlPlay } from "react-icons/sl";
+import { AiFillPlayCircle } from "react-icons/ai";
 
 function Arrow(props) {
   const disabeld = props.disabled ? " arrow--disabled" : "";
@@ -20,19 +20,20 @@ function Arrow(props) {
       viewBox="0 0 24 24"
     >
       {props.left && (
-        // <path d='M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z' />
-        <div className="small-chevron"> &#8592;</div>
+        <path d='M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z' />
+    
       )}
       {!props.left && (
-        // <path d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z' />
-        <path d="M492.5,293.3c-0.2,0-0.3-0.1-0.4-0.2c-0.1-0.2-0.1-0.5,0.2-0.7l18.7-10.8c1.1-0.7,1.8-1.8,1.8-3.1c0-1.3-0.7-2.5-1.8-3.1
-        l-18.7-10.8c-0.2-0.1-0.3-0.4-0.2-0.7c0.1-0.2,0.4-0.3,0.7-0.2l18.7,10.8c1.5,0.8,2.3,2.3,2.3,4c0,1.7-0.9,3.2-2.3,4l-18.7,10.8
-        C492.7,293.3,492.6,293.3,492.5,293.3z"/>
+        <path d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z' />
+
+      
         // <div className="small-chevron">&#8594;</div>
       )}
     </svg>
   );
 }
+
+
 
 const PostCard = ({ post, category, src }) => {
   const [categories, setCategories] = useState([]);
@@ -51,6 +52,8 @@ const PostCard = ({ post, category, src }) => {
       setLoaded(true);
     },
   });
+  const[currentTime1, setCurrentTime1] = useState('00:00');
+  const[currentTime2, setCurrentTime2] = useState('00:00');
 
   useEffect(() => {
     getCategories().then((newCategories) => setCategories(newCategories));
@@ -62,17 +65,22 @@ const PostCard = ({ post, category, src }) => {
     setIsOpen(!isOpen);
   };
 
+
   const playOrPause = () => {
     if(videoRef.current.paused){videoRef.current.play();}
    else {videoRef.current.pause()}
   };
-
+  
   const onPlay = () => setIsPlaying(true);
+    
+  const onPause = () => setIsPlaying(false);
 
-const onPause = () => setIsPlaying(false);
+  
+
 
 
   return (
+    
     <div className="wrapper">
       <div class="box content">
         <div className="navigation-wrapper">
@@ -95,6 +103,7 @@ const onPause = () => setIsPlaying(false);
               })}
 
             {post.featuredVideo && (
+             
               <div className="keen-slider__slide">
                 <div className="video-wrapper">
                   <video
@@ -106,10 +115,15 @@ const onPause = () => setIsPlaying(false);
                     alt={post.title}
                     className="video-box"
                   />
+                
+
+          
                   <div className="controls" onClick={playOrPause}>
-                {!isPlaying &&(<SlControlPlay size={50} className='video-control' />)
+                {!isPlaying &&(<AiFillPlayCircle size={50} className='video-control' />)
                 }
                 </div>
+          
+
                 </div>
               </div>
             )}

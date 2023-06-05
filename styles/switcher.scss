@@ -159,13 +159,19 @@ body {
         p,
         .categories-cards {
             color: rgb(245, 245, 245);
+            
         }
 
         .more-button,
-        .web-link, .dot, #cat-cards {
+        .web-link, #cat-cards {
             border: 1px solid rgb(245, 245, 245);
             color: #fff;
+       
 
+        }
+
+        .dot {
+            background:rgb(245, 245, 245, 0.5);
         }
 
         .dot.active {
