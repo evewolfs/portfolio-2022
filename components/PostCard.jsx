@@ -6,7 +6,7 @@ import { getCategories } from "../services";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { AiOutlineEye } from "react-icons/ai";
+import { BsFillPlayCircleFill } from "react-icons/bs";
 
 function Arrow(props) {
   const disabeld = props.disabled ? " arrow--disabled" : "";
@@ -95,7 +95,7 @@ const PostCard = ({ post, category, src }) => {
              <div className="keen-slider__slide">
                <div className="video-wrapper">
                  <video
-               
+               muted playsInline  preload="" 
                       onPlay={onPlay}
                       onPause={onPause}
                       ref={videoRef}
@@ -108,7 +108,7 @@ const PostCard = ({ post, category, src }) => {
 
          
                  <div className="controls" onClick={playOrPause}>
-               {!isPlaying &&(<AiOutlineEye size={10} className='video-control' />)
+               {!isPlaying &&(<BsFillPlayCircleFill size={10} className='video-control' />)
                }
                </div>
          

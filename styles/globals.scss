@@ -425,26 +425,28 @@ margin-bottom: 4%;
 }
 
 .video-control {
-  svg{
-    height: 16px;
-    width: 16px;
-  }
-border-radius: 100px;
-// padding: 16px;
-// padding-left: 21px;
-// padding-top: 17px;
-padding: 1%;
-margin: 2%;
-overflow: visible;
-width: 40px;
-height: 40px;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-  background: rgba(255, 255, 255, 0.9);
 
-color: rgba(34, 34, 34, 0.707);
+border-radius: 100px;
+margin: 4%;
+padding-left: 1%;
+overflow: visible;
+width: 60px;
+height: 60px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  filter: drop-shadow(3px 3px 10px rgba(60, 60, 60, 0.4));
   &:hover{
     opacity: 0.3;
+  }
+  
+}
+
+@media only screen and (max-width: 629px) {
+  .video-control {
+    width: 40px;
+    height: 40px;
+    padding: 1%;
+
   }
 }
 
