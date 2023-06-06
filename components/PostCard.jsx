@@ -6,7 +6,9 @@ import { getCategories } from "../services";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { BsFillPlayCircleFill } from "react-icons/bs";
+import { BsPlay, BsPause } from "react-icons/bs";
+import {AiOutlinePlus, AiOutlineMinus} from "react-icons/ai";
+
 
 function Arrow(props) {
   const disabeld = props.disabled ? " arrow--disabled" : "";
@@ -107,10 +109,7 @@ const PostCard = ({ post, category, src }) => {
                
 
          
-                 <div className="controls" onClick={playOrPause}>
-               {!isPlaying &&(<BsFillPlayCircleFill size={10} className='video-control' />)
-               }
-               </div>
+            
          
 
                </div>
@@ -172,9 +171,23 @@ const PostCard = ({ post, category, src }) => {
       </div>
 
       <div class="box sidebar">
+        <motion.div className="top-container">
+        <motion.div className="text-info">
         <motion.h1 className="post-title">{post.title}</motion.h1>
         <motion.h1 className="post-client">{post.excerpt}</motion.h1>
-        <div className="categories-box">
+        </motion.div>
+        <div className="controls" onClick={playOrPause}>
+               {!isPlaying?(<BsPlay size={32} className='video-control'/>):(<BsPause size={32} className='video-control'/>)
+               }
+               </div>
+               </motion.div>
+        <motion.div
+          onClick={handleMore}
+          transition={{ layout: { duration: 1, type: "spring" } }}
+        >
+          {isOpen && (
+            <motion.p className="p-text">
+            <div className="categories-box">
                 {post.categories
                   .filter((category) => category.name !== "all")
                   .map((category) => (
@@ -189,13 +202,6 @@ const PostCard = ({ post, category, src }) => {
                     </Link>
                   ))}
               </div>
-        <motion.div
-          onClick={handleMore}
-          transition={{ layout: { duration: 1, type: "spring" } }}
-        >
-          {isOpen && (
-            <motion.p className="p-text">
-          
 
               {post.content.raw && <RichText content={post.content.raw} />}
 
@@ -214,7 +220,7 @@ const PostCard = ({ post, category, src }) => {
           )}
 
           <motion.button className="more-button">
-            {isActive ? <div>less</div> : <div>more</div>}
+            {isActive ? <AiOutlineMinus size={18} /> : <AiOutlinePlus size={18} />}
           </motion.button>
         </motion.div>
       </div>
