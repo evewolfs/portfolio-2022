@@ -346,17 +346,11 @@ a {
 
 .img-box {
   border-radius: 2px;
-  // margin-bottom: 4%;
-  box-shadow: var(--shadow);
   object-fit: contain;
   width: auto;
+  height: auto;
 }
 
-@media only screen and (max-width: 629px) {
-  .img-box {
-    width: auto;
-  }
-}
 
 .navigation-wrapper {
   position: relative;
