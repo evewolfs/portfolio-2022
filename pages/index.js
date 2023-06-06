@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Script from 'next/script';
 import { PostCard } from "../components";
 import { getPosts } from "../services";
 import { RichText } from "@graphcms/rich-text-react-renderer";
@@ -15,16 +16,19 @@ export default function Home({ posts }) {
         <link rel="stylesheet" href="https://use.typekit.net/nmy3nwt.css"/>
     
   
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}></script>
-<script>
-  dangerouslySetInnerHTML= {{__html:  `window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-  gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');`
-  }}
- 
-</script>
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+        `}
+      </Script>
 </Head>
 
       <div className="wrapper">
