@@ -1,6 +1,4 @@
 
-// @import url("https://use.typekit.net/nmy3nwt.css");
-
 * {
     box-sizing: border-box;
 }
@@ -17,14 +15,11 @@ body {
     letter-spacing: normal;
     font-family: neue-haas-grotesk-text, sans-serif;
     font-weight: 300;
-  
-
 }
 
 
 
 .theme-options {
-
     color: #222;
     display: inline-flex;
     padding: 0.5%;
@@ -34,32 +29,16 @@ body {
     height: 40px;
     border-radius: 40px;
     background: var(--clearbg);
-
     box-shadow: var(--shadow);
     vertical-align: middle;
     align-items: center;
     justify-content: center;
-
-
     header-box {
         div {
             display: flex;
             vertical-align: middle;
-
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
     #theme-sun {
         background-color: transparent;
@@ -77,7 +56,6 @@ body {
             transform: scale(1.8);
             padding: 4px;
             background: var(--text);
-
         }
     }
 
@@ -118,7 +96,6 @@ body {
             padding: 4px;
             background-color: transparent;
             background: var(--text);
-
         }
 
     }
@@ -139,8 +116,6 @@ body {
             transform: scale(1.6);
             padding: 4px;
             background: var(--text);
-
-
         }
     }
 }
@@ -150,50 +125,43 @@ body {
     background-color: #2b2b2b;
 
     .content-box {
-
         h1,
         h2,
         h3,
         h4,
         h5,
         p,
-        .categories-cards, .footer, .more-button {
+        .categories-cards,
+        .footer
+         {
             color: rgb(245, 245, 245);
-            
+
         }
 
-       
-        .web-link, #cat-cards {
+
+        .web-link,
+        #cat-cards, .more-button, .video-control {
             border: 1px solid rgb(245, 245, 245);
             color: #fff;
-       
-
         }
 
         .dot {
-            background:rgb(245, 245, 245, 0.5);
+            background: rgb(245, 245, 245, 0.5);
         }
 
         .dot.active {
             background: rgb(245, 245, 245);
-          }
-          
+        }
+
 
         .categories {
-
-
             &.active {
-             
-                    opacity: 0.5;
-               
-               
+                opacity: 0.5;
             }
 
             a {
                 box-shadow: var(--shadow);
                 background: var(--clearbg);
-
-              
             }
         }
 
@@ -203,7 +171,6 @@ body {
 .Main.theme-sun {
     .content-box {
         background-color: #f6f6f6;
-
         h3,
         h5,
         p {
@@ -221,7 +188,7 @@ body {
             box-shadow: var(--shadow);
             background: rgba(255, 255, 255, 0.3);
 
-          
+
         }
     }
 
@@ -232,7 +199,6 @@ body {
     background-color: #c1c5d3;
 
     .content-box {
-
         .bio-button,
         .contact-box,
         .theme-options {
@@ -244,7 +210,6 @@ body {
             &.active {
                 background: rgba(222, 222, 222, 0.7);
                 box-shadow: 0 0 12px 12px rgb(222, 222, 222, 0.7);
-
             }
 
             a {
@@ -254,18 +219,14 @@ body {
                 &:hover {
                     background: rgba(222, 222, 222, 0.7);
                     box-shadow: 0 0 12px 12px rgb(222, 222, 222, 0.7);
-
                 }
             }
         }
-
     }
-
 }
 
 .Main.theme-rainbow {
     background-color: #9399a9;
-
 
     .content-box {
 
@@ -344,70 +305,71 @@ body {
         }
 
         @media only screen and (max-width: 629px) {
-        .categories {
+            .categories {
 
-            a {
-                background-color: rgba(255, 255, 255, 0);
+                a {
+                    background-color: rgba(255, 255, 255, 0);
 
-                &:nth-child(1) {
-                    opacity: 0.8;
-                    border: 0px solid #CC99FF;
-                    background-color: #cc99ff;
-                    box-shadow: #CC99FF 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                    &:nth-child(1) {
+                        opacity: 0.8;
+                        border: 0px solid #CC99FF;
+                        background-color: #cc99ff;
+                        box-shadow: #CC99FF 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 0.8;
+                        border: 0px solid #CC99FF;
+                        background-color: #cc99ff;
+                        box-shadow: #CC99FF 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                    }
+
+                    &:nth-child(3) {
+                        opacity: 0.8;
+                        border: 0px solid #A9D1F7;
+                        background-color: #A9D1F7;
+                        box-shadow: #A9D1F7 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                    }
+
+                    &:nth-child(4) {
+                        opacity: 0.8;
+                        border: 0px solid #B4F0A7;
+                        background-color: #B4F0A7;
+                        box-shadow: #B4F0A7 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                    }
+
+                    &:nth-child(5) {
+                        opacity: 0.8;
+                        border: 0px solid #FFFFBF;
+                        background-color: #FFFFBF;
+                        box-shadow: #FFFFBF 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                    }
+
+                    &:nth-child(6) {
+                        opacity: 0.8;
+                        border: 0px solid #FFDFBE;
+                        background-color: #FFDFBE;
+                        box-shadow: #FFDFBE 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                    }
+
+                    &:nth-child(7) {
+                        opacity: 0.8;
+                        border: 0px solid #FFB1B0;
+                        background-color: #FFB1B0;
+                        box-shadow: #FFB1B0 0px -30px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                    }
+
+                    &.active {
+                        filter: saturate(4);
+                    }
+
+                    &:hover {
+                        filter: saturate(4);
+                    }
                 }
 
-                &:nth-child(2) {
-                    opacity: 0.8;
-                    border: 0px solid #CC99FF;
-                    background-color: #cc99ff;
-                    box-shadow: #CC99FF 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-                }
-
-                &:nth-child(3) {
-                    opacity: 0.8;
-                    border: 0px solid #A9D1F7;
-                    background-color: #A9D1F7;
-                    box-shadow: #A9D1F7 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-                }
-
-                &:nth-child(4) {
-                    opacity: 0.8;
-                    border: 0px solid #B4F0A7;
-                    background-color: #B4F0A7;
-                    box-shadow: #B4F0A7 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-                }
-
-                &:nth-child(5) {
-                    opacity: 0.8;
-                    border: 0px solid #FFFFBF;
-                    background-color: #FFFFBF;
-                    box-shadow: #FFFFBF 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-                }
-
-                &:nth-child(6) {
-                    opacity: 0.8;
-                    border: 0px solid #FFDFBE;
-                    background-color: #FFDFBE;
-                    box-shadow: #FFDFBE 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-                }
-
-                &:nth-child(7) {
-                    opacity: 0.8;
-                    border: 0px solid #FFB1B0;
-                    background-color: #FFB1B0;
-                    box-shadow: #FFB1B0 0px -30px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-                }
-
-                &.active {
-                    filter: saturate(4);
-                }
-
-                &:hover {
-                    filter: saturate(4);
-                }
             }
-
-        }}
+        }
 
         .theme-options {
             background-color: rgba(255, 255, 255, 0.1);
@@ -418,7 +380,6 @@ body {
 
         .bio-button,
         .contact-box {
-
             background-color: rgba(255, 255, 255, 0.05);
             box-shadow: none;
         }

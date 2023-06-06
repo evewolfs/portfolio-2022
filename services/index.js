@@ -1,5 +1,4 @@
 import { request, gql } from "graphql-request";
-import { RichText } from "@graphcms/rich-text-react-renderer";
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 

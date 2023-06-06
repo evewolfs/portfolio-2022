@@ -7,8 +7,7 @@ import { RichText } from "@graphcms/rich-text-react-renderer";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { BsPlay, BsPause } from "react-icons/bs";
-import {AiOutlinePlus, AiOutlineMinus} from "react-icons/ai";
-
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
 function Arrow(props) {
   const disabeld = props.disabled ? " arrow--disabled" : "";
@@ -22,27 +21,21 @@ function Arrow(props) {
       viewBox="0 0 24 24"
     >
       {props.left && (
-        <path d='M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z' />
-    
+        <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
       )}
       {!props.left && (
-        <path d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z' />
-
-      
-        // <div className="small-chevron">&#8594;</div>
+        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
       )}
     </svg>
   );
 }
-
-
 
 const PostCard = ({ post, category, src }) => {
   const [categories, setCategories] = useState([]);
   const [active, setActive] = useState(null);
   const [isActive, setIsActive] = useState(false);
   const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
@@ -55,7 +48,6 @@ const PostCard = ({ post, category, src }) => {
     },
   });
 
-
   useEffect(() => {
     getCategories().then((newCategories) => setCategories(newCategories));
   }, []);
@@ -66,22 +58,19 @@ const PostCard = ({ post, category, src }) => {
     setIsOpen(!isOpen);
   };
 
-
   const playOrPause = () => {
-    if(videoRef.current.paused){videoRef.current.play();}
-   else {videoRef.current.pause()}
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+    } else {
+      videoRef.current.pause();
+    }
   };
-  
+
   const onPlay = () => setIsPlaying(true);
-    
+
   const onPause = () => setIsPlaying(false);
 
-  
-
-
-
   return (
-    
     <div className="wrapper">
       <div class="box content">
         <div className="navigation-wrapper">
@@ -92,42 +81,33 @@ const PostCard = ({ post, category, src }) => {
               </div>
             )}
 
-{post.featuredVideo && (
-             
-             <div className="keen-slider__slide">
-               <div className="video-wrapper">
-                 <video
-               muted playsInline  preload="" 
-                      onPlay={onPlay}
-                      onPause={onPause}
-                      ref={videoRef}
-                   poster={post.featuredImage.url}
-                   src={post.featuredVideo.url}
-                   alt={post.title}
-                   className="video-box"
-                 />
-               
+            {post.featuredVideo && (
+              <div className="keen-slider__slide">
+                <div className="video-wrapper">
+                  <video
+                    muted
+                    playsInline
+                    preload=""
+                    onPlay={onPlay}
+                    onPause={onPause}
+                    ref={videoRef}
+                    poster={post.featuredImage.url}
+                    src={post.featuredVideo.url}
+                    alt={post.title}
+                    className="video-box"
+                  />
+                </div>
+              </div>
+            )}
 
-         
-            
-         
-
-               </div>
-             </div>
-           )}
-
-            {post.featuredImg.length !=0 &&
+            {post.featuredImg.length != 0 &&
               post.featuredImg.map((item, i) => {
                 return (
                   <div key={i} className="keen-slider__slide">
                     <img className="img-box" src={item.url} />
                   </div>
                 );
-
-                
               })}
-
-           
           </div>
           {loaded && instanceRef.current && post.featuredImg.length > 1 && (
             <>
@@ -172,23 +152,27 @@ const PostCard = ({ post, category, src }) => {
 
       <div class="box sidebar">
         <motion.div className="top-container">
-        <motion.div className="text-info">
-        <motion.h1 className="post-title">{post.title}</motion.h1>
-        <motion.h1 className="post-client">{post.excerpt}</motion.h1>
+          <motion.div className="text-info">
+            <motion.h1 className="post-title">{post.title}</motion.h1>
+            <motion.h1 className="post-client">{post.excerpt}</motion.h1>
+          </motion.div>
+          {post.featuredVideo && (
+            <div className="controls" onClick={playOrPause}>
+              {!isPlaying ? (
+                <BsPlay size={28} className="video-control" />
+              ) : (
+                <BsPause size={28} className="video-control" />
+              )}
+            </div>
+          )}
         </motion.div>
-        {post.featuredVideo &&
-        <div className="controls" onClick={playOrPause}>
-               {!isPlaying  ?(<BsPlay size={32} className='video-control'/>):(<BsPause size={32} className='video-control'/>)
-               }
-               </div>}
-               </motion.div>
         <motion.div
           onClick={handleMore}
           transition={{ layout: { duration: 1, type: "spring" } }}
         >
           {isOpen && (
             <motion.p className="p-text">
-            <div className="categories-box">
+              <div className="categories-box">
                 {post.categories
                   .filter((category) => category.name !== "all")
                   .map((category) => (
@@ -205,9 +189,7 @@ const PostCard = ({ post, category, src }) => {
               </div>
 
               {post.content.raw && <RichText content={post.content.raw} />}
-
               {post.process.raw && <RichText content={post.process.raw} />}
-
               <>
                 {post.websiteLink && (
                   <motion.div className="web-link">
@@ -221,7 +203,11 @@ const PostCard = ({ post, category, src }) => {
           )}
 
           <motion.button className="more-button">
-            {isActive ? <AiOutlineMinus size={18} /> : <AiOutlinePlus size={18} />}
+            {isActive ? (
+              <AiOutlineMinus size={18} />
+            ) : (
+              <AiOutlinePlus size={18} />
+            )}
           </motion.button>
         </motion.div>
       </div>

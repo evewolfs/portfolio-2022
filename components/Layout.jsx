@@ -47,15 +47,26 @@ const Layout = ({ children }) => {
 
               {isBioOpen && (
                 <motion.div className="p-bio">
-Hello, I am a designer and developer.
-<br/>
-Based and born in Brussels (1990), I grew up with an art teacher grandmother, and a graphic designer mother crafting advertising from our backyard.
-<br/>
-I graduated from an industrial design master (2015) and spent almost 4 years working as a UX and design researcher with a few agencies. Obsessed to understand all about users, I met a ton of them, wrote many reports and designed several screen flows. Curious to dive deeper in digital production, I studied front-end development (2019) and started selling websites and digital design. 
-<br/>Since 2015, I’ve enjoyed collaborating with a wide range of clients such as The World Bank, The Luxembourg Institute of Socio-Economic Research, and my plumber.
-<br/>
-From scratch to the launch, I appreciate every step of the process, and take most pleasure figuring out digital architecture and designing tidy interfaces.
-<br/>
+                  Hello, I am a designer and developer.
+                  <br />
+                  Based and born in Brussels (1990), I grew up with an art
+                  teacher grandmother, and a graphic designer mother crafting
+                  advertising from our backyard.
+                  <br />
+                  I graduated with an industrial design master (2015) and spent
+                  almost 4 years working as a UX and design researcher with a
+                  few agencies. Obsessed to understand all about users, I met a
+                  ton of them, wrote many reports, and designed several screen
+                  flows. Curious to dive deeper into digital production, I
+                  studied front-end development (2019) and started selling
+                  websites and digital design right after.
+                  <br />
+                  Since 2015, I’ve enjoyed collaborating with a wide range of
+                  clients such as The World Bank, The Luxembourg Institute of
+                  Socio-Economic Research, Samsung, and my plumber. From scratch
+                  to the launch, I appreciate every step of the process, and
+                  take the most pleasure in figuring out digital architecture
+                  and designing tidy interfaces.
                 </motion.div>
               )}
             </motion.div>
@@ -92,7 +103,15 @@ From scratch to the launch, I appreciate every step of the process, and take mos
           <Categories />
 
           {children}
-          <div className="footer">made with next.js and react.js - <a href="https://github.com/evewolfs/portfolio-2022" target="_blank" ><span>see on github</span></a></div>
+          <div className="footer">
+            made with next.js and react.js -{" "}
+            <a
+              href="https://github.com/evewolfs/portfolio-2022"
+              target="_blank"
+            >
+              <span>see on github</span>
+            </a>
+          </div>
         </motion.div>
       </div>
     </>

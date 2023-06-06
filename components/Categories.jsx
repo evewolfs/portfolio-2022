@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 const Categories = () => {
   const router = useRouter();
   const { slug } = router.query;
-
   const [categories, setCategories] = useState([]);
   const [active, setActive] = useState(!slug ? "all" : slug);
 

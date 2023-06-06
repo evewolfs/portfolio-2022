@@ -1,11 +1,10 @@
 import React from "react";
 import ButtonContact from "./ButtonContact";
 
-const Header = (props) => {
+const Header = () => {
   return (
     <div className="header-box">
       <BioButton />
-      {/* <TextSlider slides={SliderData} /> */}
       <ButtonContact />
     </div>
   );

@@ -14,7 +14,6 @@ const CategoryPost = ({ posts }) => {
   return (
     <div className="selected-category">
       <br />
-
       {posts.map((post, index) => (
         <PostCard key={index} post={post.node} />
       ))}
