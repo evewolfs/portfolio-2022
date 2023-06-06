@@ -176,10 +176,11 @@ const PostCard = ({ post, category, src }) => {
         <motion.h1 className="post-title">{post.title}</motion.h1>
         <motion.h1 className="post-client">{post.excerpt}</motion.h1>
         </motion.div>
+        {post.featuredVideo &&
         <div className="controls" onClick={playOrPause}>
-               {!isPlaying?(<BsPlay size={32} className='video-control'/>):(<BsPause size={32} className='video-control'/>)
+               {!isPlaying  ?(<BsPlay size={32} className='video-control'/>):(<BsPause size={32} className='video-control'/>)
                }
-               </div>
+               </div>}
                </motion.div>
         <motion.div
           onClick={handleMore}

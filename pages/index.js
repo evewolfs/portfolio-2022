@@ -13,7 +13,19 @@ export default function Home({ posts }) {
         <title>ève wolfs</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/nmy3nwt.css"/>
-      </Head>
+    
+  
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}></script>
+<script>
+  dangerouslySetInnerHTML= {{__html:  `window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');`
+  }}
+ 
+</script>
+</Head>
 
       <div className="wrapper">
         {" "}
