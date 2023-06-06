@@ -1,6 +1,3 @@
-
-
-
 :root {
   --clearbg: rgba(255, 255, 255, 0.6);
   --shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
@@ -243,7 +240,41 @@ a {
   width: 100%;
 }
 
+.controls {
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 
+}
+@media only screen and (max-width: 629px) {
+
+ 
+}
+.video-control {
+
+  border-radius: 100px;
+  margin: 40%;
+  padding-left: 1%;
+  overflow: visible;
+  width: 60px;
+  height: 60px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+    filter: drop-shadow(3px 3px 10px rgba(60, 60, 60, 0.4));
+    &:hover{
+      opacity: 0.3;
+    }
+  }
+  @media only screen and (max-width: 629px) {
+   .video-control{ width: 40px;
+    height: 40px;}
+
+  }
 
 @media only screen and (min-width: 630px) {
   .wrapper {
@@ -268,10 +299,7 @@ a {
 
   }
 
-  .controls {
-    display: flex;
-    width: 100%;
-  }
+
 
   .content {
     float: left;
@@ -280,30 +308,20 @@ a {
   }
 }
 
-.video-control {
-  border-radius: 100px;
-  padding: 0.5%;
- cursor: pointer;
-  overflow: visible;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #222;
-  border-radius: 30px;
-  margin-top: 0;
-  padding-left: 1%;
 
-  &:hover {
-    opacity: 0.3;
-  }
-}
+  
+
 
 @media only screen and (max-width: 629px) {
+  .wrapper {
+    width: 100%;
 
+  }
   .content {
     float: none;
     width: 100%;
     padding: 0;
-    margin:0;
+    margin: 0;
   }
 
   .sidebar {
@@ -311,7 +329,7 @@ a {
     width: 100%;
     padding: 2%;
     margin-bottom: 4%;
-    
+
 
   }
 
@@ -327,25 +345,7 @@ a {
 
   }
 
-  .controls {
-    display: flex;
-    width: 20%;
-    justify-content: flex-end;
-
-  }
-
-  .video-control {
-    transform: scale(0.9);
-    padding: 2%;
-    margin: 0;
-    padding-left: 6%;
-  }
-
-
-  .wrapper {
-    width: 100%;
-
-  }
+ 
 }
 
 .img-box {
