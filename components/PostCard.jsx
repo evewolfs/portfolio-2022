@@ -94,7 +94,7 @@ const PostCard = ({ post, category, src }) => {
                     poster={post.featuredImage.url}
                     src={post.featuredVideo.url}
                     alt={post.title}
-                    className="video-box"
+                    className="img-box"
                   />
                 </div>
                

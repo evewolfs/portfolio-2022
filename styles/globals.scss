@@ -252,9 +252,8 @@ a {
 }
 
 .video-control {
-
   border-radius: 100px;
-  margin: 40%;
+  margin-top: 40%;
   padding-left: 1%;
   overflow: visible;
   width: 60px;
@@ -273,21 +272,24 @@ a {
   }
 
 @media only screen and (min-width: 630px) {
-  .wrapper {
-    margin-bottom: 4%;
-  }
 
+
+
+.top-container {
+  display: block;
+  width: 100%;
+
+}
   .sidebar {
     float: left;
-    width: 34%;
+    width: 40%;
     bottom: 0;
     padding: 2%;
+    padding-top: 4%;
+    padding-left: 0;
   }
 
-  .top-container {
-    display: block;
-    width: 100%;
-  }
+
 
   .text-info {
     display: block;
@@ -295,12 +297,10 @@ a {
 
   }
 
-
-
   .content {
     float: left;
-    width: 66%;
-    margin-bottom: 4%;
+    width: 60%;
+    padding: 4% 2%;
   }
 }
 
@@ -347,6 +347,7 @@ a {
 .img-box {
   border-radius: 2px;
   object-fit: contain;
+
 
 
 }
@@ -482,14 +483,13 @@ a {
 
 
 .p-text {
-  width: 100%;
+  width: 80%;
 
   p {
     font-size: 16px;
     margin-bottom: 0;
     margin-top: 1%;
     margin-right: 4%;
-
     font-weight: 300;
     font-style: normal;
     letter-spacing: normal;
