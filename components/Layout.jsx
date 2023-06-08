@@ -46,7 +46,7 @@ const Layout = ({ children }) => {
 
               {isBioOpen && (
                 <motion.div className="p-bio">
-                  Hello, I am a designer and developer.
+                  Hello, I am a digital/product designer and developer.
                   <br />
                   Based and born in Brussels (1990), I grew up with an art
                   teacher grandmother, and a graphic designer mother crafting
@@ -59,9 +59,14 @@ const Layout = ({ children }) => {
                   flows. Curious to dive deeper into digital production, I
                   studied front-end development (2019) and started selling
                   websites and digital design right after.
-                  <br />From scratch to the launch, I appreciate every step of the process, and
-                  take the most pleasure in figuring out user flows
-                  and designing tidy interfaces.
+                  <br />
+                  Since 2015, I’ve enjoyed collaborating with a wide range of
+                  clients such as The World Bank, The Luxembourg Institute of
+                  Socio-Economic Research, Samsung, and BouwhulpGroep.
+                  <br />
+                  From scratch to the launch, I appreciate every step of the
+                  process, and take the most pleasure in figuring out user flows
+                  and functionalities, as well as designing tidy interfaces.
                 </motion.div>
               )}
             </motion.div>
