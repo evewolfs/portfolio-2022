@@ -107,7 +107,10 @@ a {
   vertical-align: middle;
   letter-spacing: 0;
   flex-direction: column;
-  &:hover{transform: scale(1.02);}
+
+  &:hover {
+    transform: scale(1.02);
+  }
 
 }
 
@@ -157,7 +160,9 @@ a {
     box-shadow: none;
   }
 
-  &:hover{transform: scale(1.06);}
+  &:hover {
+    transform: scale(1.06);
+  }
 
 }
 
@@ -189,6 +194,7 @@ a {
     &:hover {
       transform: scale(1.02);
     }
+
     &:active {
       opacity: 0.2;
     }
@@ -244,7 +250,7 @@ a {
 
 .controls {
   position: absolute;
-  top:0;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
@@ -260,28 +266,33 @@ a {
   overflow: visible;
   width: 60px;
   height: 60px;
-    cursor: pointer;
-    color: rgba(255, 255, 255, 0.7);
-    filter: drop-shadow(3px 3px 10px rgba(60, 60, 60, 0.4));
-    &:hover{
-      opacity: 0.3;
-    }
-  }
-  @media only screen and (max-width: 629px) {
-   .video-control{ width: 40px;
-    height: 40px;}
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  filter: drop-shadow(3px 3px 10px rgba(60, 60, 60, 0.4));
 
+  &:hover {
+    opacity: 0.3;
   }
+}
+
+@media only screen and (max-width: 629px) {
+  .video-control {
+    width: 40px;
+    height: 40px;
+  }
+
+}
 
 @media only screen and (min-width: 630px) {
 
 
 
-.top-container {
-  display: block;
-  width: 100%;
+  .top-container {
+    display: block;
+    width: 100%;
 
-}
+  }
+
   .sidebar {
     float: left;
     width: 40%;
@@ -307,7 +318,7 @@ a {
 }
 
 
-  
+
 
 
 @media only screen and (max-width: 629px) {
@@ -315,6 +326,7 @@ a {
     width: 100%;
 
   }
+
   .content {
     float: none;
     width: 100%;
@@ -343,7 +355,7 @@ a {
 
   }
 
- 
+
 }
 
 .img-box {

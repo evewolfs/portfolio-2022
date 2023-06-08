@@ -91,17 +91,18 @@ const PostCard = ({ post, category, src }) => {
                     onPlay={onPlay}
                     onPause={onPause}
                     ref={videoRef}
-                    // poster={post.featuredImage.url}
+                    poster={post.featuredImage.url}
                     src={post.featuredVideo.url}
                     alt={post.title}
                     className="img-box"
                   />
                 </div>
-               
+
                 <div className="controls" onClick={playOrPause}>
-               {!isPlaying &&(<BsFillPlayCircleFill size={10} className='video-control' />)
-               }
-               </div>
+                  {!isPlaying && (
+                    <BsFillPlayCircleFill size={10} className="video-control" />
+                  )}
+                </div>
               </div>
             )}
 
@@ -161,7 +162,6 @@ const PostCard = ({ post, category, src }) => {
             <motion.h1 className="post-title">{post.title}</motion.h1>
             <motion.h1 className="post-client">{post.excerpt}</motion.h1>
           </motion.div>
-        
         </motion.div>
         <motion.div
           onClick={handleMore}
