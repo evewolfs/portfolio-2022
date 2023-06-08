@@ -212,4 +212,5 @@ const PostCard = ({ post, category, src }) => {
   );
 };
 
+
 export default PostCard;
