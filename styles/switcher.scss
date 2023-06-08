@@ -249,42 +249,36 @@ body {
                     box-shadow: #CC99FF 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
                 }
 
-                &:nth-child(2) {
-                    opacity: 0.6;
-                    border: 0px solid #CC99FF;
-                    background-color: #cc99ff;
-                    box-shadow: #CC99FF 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-                }
 
-                &:nth-child(3) {
+                &:nth-child(2) {
                     opacity: 0.6;
                     border: 0px solid #A9D1F7;
                     background-color: #A9D1F7;
                     box-shadow: #A9D1F7 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
                 }
 
-                &:nth-child(4) {
+                &:nth-child(3) {
                     opacity: 0.6;
                     border: 0px solid #B4F0A7;
                     background-color: #B4F0A7;
                     box-shadow: #B4F0A7 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
                 }
 
-                &:nth-child(5) {
+                &:nth-child(4) {
                     opacity: 0.6;
                     border: 0px solid #FFFFBF;
                     background-color: #FFFFBF;
                     box-shadow: #FFFFBF 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
                 }
 
-                &:nth-child(6) {
+                &:nth-child(5) {
                     opacity: 0.6;
                     border: 0px solid #FFDFBE;
                     background-color: #FFDFBE;
                     box-shadow: #FFDFBE 0px -30px 120px 60px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
                 }
 
-                &:nth-child(7) {
+                &:nth-child(6) {
                     opacity: 0.6;
                     border: 0px solid #FFB1B0;
                     background-color: #FFB1B0;
@@ -313,42 +307,36 @@ body {
                         box-shadow: #CC99FF 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
                     }
 
+        
                     &:nth-child(2) {
-                        opacity: 0.8;
-                        border: 0px solid #CC99FF;
-                        background-color: #cc99ff;
-                        box-shadow: #CC99FF 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-                    }
-
-                    &:nth-child(3) {
                         opacity: 0.8;
                         border: 0px solid #A9D1F7;
                         background-color: #A9D1F7;
                         box-shadow: #A9D1F7 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
                     }
 
-                    &:nth-child(4) {
+                    &:nth-child(3) {
                         opacity: 0.8;
                         border: 0px solid #B4F0A7;
                         background-color: #B4F0A7;
                         box-shadow: #B4F0A7 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
                     }
 
-                    &:nth-child(5) {
+                    &:nth-child(4) {
                         opacity: 0.8;
                         border: 0px solid #FFFFBF;
                         background-color: #FFFFBF;
                         box-shadow: #FFFFBF 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
                     }
 
-                    &:nth-child(6) {
+                    &:nth-child(5) {
                         opacity: 0.8;
                         border: 0px solid #FFDFBE;
                         background-color: #FFDFBE;
                         box-shadow: #FFDFBE 0px 10px 120px 50px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
                     }
 
-                    &:nth-child(7) {
+                    &:nth-child(6) {
                         opacity: 0.8;
                         border: 0px solid #FFB1B0;
                         background-color: #FFB1B0;
@@ -378,7 +366,6 @@ body {
         }
     }
 }
-
 
 @media only screen and (max-width: 629px) {
     .theme-options {
