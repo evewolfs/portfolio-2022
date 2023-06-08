@@ -59,12 +59,8 @@ const Layout = ({ children }) => {
                   flows. Curious to dive deeper into digital production, I
                   studied front-end development (2019) and started selling
                   websites and digital design right after.
-                  <br />
-                  Since 2015, I’ve enjoyed collaborating with a wide range of
-                  clients such as The World Bank, The Luxembourg Institute of
-                  Socio-Economic Research, Samsung, and my plumber. From scratch
-                  to the launch, I appreciate every step of the process, and
-                  take the most pleasure in figuring out digital architecture
+                  <br />From scratch to the launch, I appreciate every step of the process, and
+                  take the most pleasure in figuring out user flows
                   and designing tidy interfaces.
                 </motion.div>
               )}
