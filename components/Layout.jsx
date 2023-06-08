@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Header } from "./";
 import Categories from "./Categories";
 import { BsSun, BsMoon, BsCloud, BsRainbow } from "react-icons/bs";
 import ButtonContact from "./ButtonContact";
