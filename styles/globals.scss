@@ -107,6 +107,7 @@ a {
   vertical-align: middle;
   letter-spacing: 0;
   flex-direction: column;
+  &:hover{transform: scale(1.02);}
 
 }
 
@@ -156,9 +157,7 @@ a {
     box-shadow: none;
   }
 
-  &:hover {
-    opacity: 0.5;
-  }
+  &:hover{transform: scale(1.06);}
 
 }
 
