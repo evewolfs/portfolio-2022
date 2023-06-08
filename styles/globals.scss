@@ -11,7 +11,7 @@ body {
   margin: 0;
   position: relative;
   font-family: neue-haas-grotesk-text, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   letter-spacing: normal;
   overflow-x: hidden;
@@ -124,7 +124,7 @@ a {
 .p-bio {
   font-size: 18px;
   padding: 2%;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   letter-spacing: normal;
   width: 70%;
@@ -188,7 +188,10 @@ a {
     background: var(--clearbg);
 
     &:hover {
-      opacity: 0.5;
+      transform: scale(1.02);
+    }
+    &:active {
+      opacity: 0.2;
     }
 
   }
@@ -300,7 +303,7 @@ a {
   .content {
     float: left;
     width: 60%;
-    padding: 4% 2%;
+    padding: 2%;
   }
 }
 
@@ -451,7 +454,7 @@ a {
 .post-title {
   font-size: clamp(1rem, 1.4vw, 2.4rem);
   margin-top: 4%;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: normal;
 }
 
@@ -490,7 +493,8 @@ a {
     margin-bottom: 0;
     margin-top: 1%;
     margin-right: 4%;
-    font-weight: 300;
+
+    font-weight: 400;
     font-style: normal;
     letter-spacing: normal;
     padding: 1%;

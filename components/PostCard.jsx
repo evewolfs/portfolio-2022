@@ -77,7 +77,7 @@ const PostCard = ({ post, category, src }) => {
           <div ref={sliderRef} className="keen-slider">
             {post.featuredImg.length === 0 && !post.featuredVideo && (
               <div className="keen-slider__slide">
-                <img className="img-box" src={post.featuredImg.url} />
+                <img className="video-box" src={post.featuredImg.url} />
               </div>
             )}
 
@@ -91,7 +91,7 @@ const PostCard = ({ post, category, src }) => {
                     onPlay={onPlay}
                     onPause={onPause}
                     ref={videoRef}
-                    poster={post.featuredImage.url}
+                    // poster={post.featuredImage.url}
                     src={post.featuredVideo.url}
                     alt={post.title}
                     className="img-box"

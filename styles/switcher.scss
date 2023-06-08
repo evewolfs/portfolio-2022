@@ -10,11 +10,10 @@ html {
 body {
     color: #222;
     height: 100vh;
+    font-family: neue-haas-grotesk-text, sans-serif;
     font-weight: 400;
     font-style: normal;
     letter-spacing: normal;
-    font-family: neue-haas-grotesk-text, sans-serif;
-    font-weight: 300;
 }
 
 
@@ -181,7 +180,7 @@ body {
 
     .categories {
         &.active {
-            opacity: 0.5;
+            opacity: 0.3;
         }
 
         a {
@@ -208,18 +207,14 @@ body {
 
         .categories {
             &.active {
-                background: rgba(222, 222, 222, 0.7);
-                box-shadow: 0 0 12px 12px rgb(222, 222, 222, 0.7);
+            opacity: 0.3;
             }
 
             a {
                 background-color: rgba(255, 255, 255, 0.7);
                 box-shadow: 0 0 12px 12px rgb(255, 255, 255, 0.7);
 
-                &:hover {
-                    background: rgba(222, 222, 222, 0.7);
-                    box-shadow: 0 0 12px 12px rgb(222, 222, 222, 0.7);
-                }
+             
             }
         }
     }
@@ -294,12 +289,10 @@ body {
                 }
 
                 &.active {
-                    filter: saturate(3);
+                  opacity: 0.2;
                 }
 
-                &:hover {
-                    filter: saturate(3);
-                }
+               
             }
 
         }
@@ -360,12 +353,10 @@ body {
                     }
 
                     &.active {
-                        filter: saturate(4);
+                       opacity: 0.3;
                     }
 
-                    &:hover {
-                        filter: saturate(4);
-                    }
+                
                 }
 
             }
