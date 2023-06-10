@@ -46,7 +46,7 @@ const Layout = ({ children }) => {
 
               {isBioOpen && (
                 <motion.div className="p-bio">
-                  Hello, I am a digital/product designer and developer.
+                  Hello, I am a digital product designer and developer.
                   <br />
                   Based and born in Brussels (1990), I grew up with an art
                   teacher grandmother, and a graphic designer mother crafting
