@@ -46,7 +46,7 @@ const Layout = ({ children }) => {
 
               {isBioOpen && (
                 <motion.div className="p-bio">
-                  Hello, I am a digital product designer and developer.
+                  Hello, I am a designer and developer.
                   <br />
                   Based and born in Brussels (1990), I grew up with an art
                   teacher grandmother, and a graphic designer mother crafting
@@ -66,7 +66,7 @@ const Layout = ({ children }) => {
                   <br />
                   From scratch to the launch, I appreciate every step of the
                   process, and take the most pleasure in figuring out user flows
-                  and functionalities, as well as designing tidy interfaces.
+                  and functionalities, as well as designing clear interfaces.
                 </motion.div>
               )}
             </motion.div>
@@ -104,13 +104,7 @@ const Layout = ({ children }) => {
 
           {children}
           <div className="footer">
-            made with next.js and react.js -{" "}
-            <a
-              href="https://github.com/evewolfs/portfolio-2022"
-              target="_blank"
-            >
-              <span>see on github</span>
-            </a>
+            made with next.js and react.js
           </div>
         </motion.div>
       </div>
