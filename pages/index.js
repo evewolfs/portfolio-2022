@@ -13,7 +13,7 @@ export default function Home({ posts }) {
         <link rel="stylesheet" href="https://use.typekit.net/nmy3nwt.css" />
 
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}"
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZEXW9RRLVN"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -22,7 +22,7 @@ export default function Home({ posts }) {
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+          gtag('config', 'G-ZEXW9RRLVN');
         `}
         </Script>
       </Head>
