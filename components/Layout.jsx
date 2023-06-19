@@ -62,7 +62,7 @@ const Layout = ({ children }) => {
                   <br />
                   Since 2015, I’ve enjoyed collaborating with a wide range of
                   clients such as The World Bank, The Luxembourg Institute of
-                  Socio-Economic Research, Samsung, and BouwhulpGroep.
+                  Socio-Economic Research, and my plumber.
                   <br />
                   From scratch to the launch, I appreciate every step of the
                   process, and take the most pleasure in figuring out user flows

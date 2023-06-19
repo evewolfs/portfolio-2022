@@ -260,14 +260,16 @@ a {
 
 .video-control {
   border-radius: 100px;
-  margin-top: 40%;
-  padding-left: 1%;
+margin-top: 50%;
+
+  padding: 2%;
   overflow: visible;
   width: 60px;
   height: 60px;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.7);
-  filter: drop-shadow(3px 3px 10px rgba(60, 60, 60, 0.4));
+  color: #222;
+  box-shadow: var(--shadow);
+  background: var(--clearbg);
 
   &:hover {
     opacity: 0.3;

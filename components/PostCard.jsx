@@ -6,7 +6,7 @@ import { getCategories } from "../services";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { BsFillPlayCircleFill } from "react-icons/bs";
+import { BsEye } from "react-icons/bs";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
 function Arrow(props) {
@@ -100,7 +100,7 @@ const PostCard = ({ post, category, src }) => {
 
                 <div className="controls" onClick={playOrPause}>
                   {!isPlaying && (
-                    <BsFillPlayCircleFill size={10} className="video-control" />
+                    <BsEye size={6} className="video-control" />
                   )}
                 </div>
               </div>
