@@ -184,7 +184,7 @@ a {
   letter-spacing: normal;
 
 
-  
+
   a {
     box-shadow: var(--shadow);
     white-space: nowrap;
@@ -260,7 +260,7 @@ a {
 
 .video-control {
   border-radius: 100px;
-margin-top: 50%;
+  margin-top: 50%;
 
   padding: 2%;
   overflow: visible;
@@ -539,6 +539,7 @@ margin-top: 50%;
   border: 1px solid var(--black);
   padding: 1% 2%;
   margin: 0.5%;
+
   &:hover {
     opacity: 0.5;
   }
