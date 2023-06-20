@@ -48,11 +48,7 @@ const Layout = ({ children }) => {
                 <motion.div className="p-bio">
                   Hello, I am a designer and developer.
                   <br />
-                  Based and born in Brussels (1990), I grew up with an art
-                  teacher grandmother, and a graphic designer mother crafting
-                  advertising from our backyard.
-                  <br />
-                  I graduated with an industrial design master (2015) and spent
+                  Based and born in Brussels (1990), I graduated with an industrial design master (2015) and spent
                   almost 4 years working as a UX and design researcher with a
                   few agencies. Obsessed to understand all about users, I met a
                   ton of them, wrote many reports, and designed several screen
@@ -104,7 +100,7 @@ const Layout = ({ children }) => {
 
           {children}
           <div className="footer">
-            made with next.js and react.js
+            made with next.js, react.js and me
           </div>
         </motion.div>
       </div>
