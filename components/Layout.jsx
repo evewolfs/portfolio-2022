@@ -48,7 +48,9 @@ const Layout = ({ children }) => {
                 <motion.div className="p-bio">
                   Hello, I am a designer and developer.
                   <br />
-                  Based and born in Brussels (1990), I graduated with an industrial design master (2015) and spent
+                  Based and born in Brussels (1990), I grew up with an art teacher grandmother, and a graphic designer mother crafting advertising from our backyard.
+                  <br/>
+                  I graduated with an industrial design master (2015) and spent
                   almost 4 years working as a UX and design researcher with a
                   few agencies. Obsessed to understand all about users, I met a
                   ton of them, wrote many reports, and designed several screen
@@ -60,9 +62,8 @@ const Layout = ({ children }) => {
                   clients such as The World Bank, The Luxembourg Institute of
                   Socio-Economic Research, and my plumber.
                   <br />
-                  From scratch to the launch, I appreciate every step of the
-                  process, and take the most pleasure in figuring out user flows
-                  and functionalities, as well as designing clear interfaces.
+                  From scratch to the launch and beyond, I appreciate every step of the process, which by the way includes meeting new people. So don’t hesitate to contact me :-)
+                  <br/>
                 </motion.div>
               )}
             </motion.div>
