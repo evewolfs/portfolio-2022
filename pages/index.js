@@ -11,7 +11,7 @@ export default function Home({ posts }) {
         <title>ève wolfs</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/nmy3nwt.css" />
-        <meta name="description" content="Digital designer and developer based in Brussels" />
+        <meta name="description" content="Digital designer and developer based in Brussels in love with simple and efficient design" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ZEXW9RRLVN"
           strategy="afterInteractive"
