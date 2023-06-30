@@ -62,7 +62,7 @@ const Layout = ({ children }) => {
                   clients such as The World Bank, The Luxembourg Institute of
                   Socio-Economic Research, and my plumber.
                   <br />
-                  From scratch to the launch and beyond, I appreciate every step of the process, which by the way includes meeting new people. So don’t hesitate to contact me :-)
+                  From scratch to the launch and beyond, I appreciate every step of the process, which by the way includes meeting new people. So don’t hesitate to contact me &#128579;
                   <br/>
                 </motion.div>
               )}
