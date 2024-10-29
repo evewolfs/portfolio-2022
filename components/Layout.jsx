@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
                   Based and born in Brussels (1990), I grew up with an art teacher grandmother, and a graphic designer mother crafting advertising from our backyard.
                   <br/>
                   I graduated with an industrial design master (2015) and spent
-                  almost 4 years working as a UX and design researcher with a
+                  almost 3 years working as a design researcher with a
                   few agencies. Obsessed to understand all about users, I met a
                   ton of them, wrote many reports, and designed several screen
                   flows. Curious to dive deeper into digital production, I
