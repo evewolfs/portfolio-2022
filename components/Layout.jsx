@@ -96,7 +96,6 @@ const Layout = ({ children }) => {
               className={`${colorTheme === "theme-moon" ? "active" : ""}`}
             />
           </motion.div>
-
           <Categories />
 
           {children}
